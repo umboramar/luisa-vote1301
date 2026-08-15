@@ -1,0 +1,1 @@
+LUISA CELA 1301 - LANDING PAGE\n\nArquivos:\n- index.html\n- assets/site-luisa.webp\n- assets/btn-whatsapp.png\n- assets/btn-apoie.png\n- assets/btn-material.png\n\nOs tres botoes sao links completos e recebem um zoom suave no mouse over.\n
