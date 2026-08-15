@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luisa Cela 1301</title>
+  <meta name="description" content="Luisa Cela 1301">
+  <style>
+    :root{
+      --red:#d71920;
+      --red-dark:#b80f17;
+      --yellow:#ffd11f;
+      --white:#ffffff;
+      --cream:#f5efe6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--white);
+      background:linear-gradient(180deg, var(--cream) 0 26%, var(--red) 26%, var(--red-dark) 100%);
+    }
+    .page{min-height:100vh}
+    .hero{
+      padding:0;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+    }
+    .hero img{
+      width:100%;
+      max-width:1400px;
+      height:auto;
+      display:block;
+    }
+    .content{
+      width:min(900px, calc(100% - 48px));
+      margin:0 auto;
+      padding:44px 0 80px;
+    }
+    .copy{
+      width:min(560px, 100%);
+      margin:0 auto;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-0.03em;
+    }
+    .rule{
+      width:42px;
+      height:4px;
+      background:var(--yellow);
+      margin:0 0 26px;
+    }
+    p{
+      margin:0 0 26px;
+      font-size:clamp(15px, 1.8vw, 18px);
+      line-height:1.6;
+      font-weight:500;
+    }
+    .vote{
+      margin:16px 0 56px;
+      font-size:clamp(34px, 5vw, 58px);
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-0.04em;
+    }
+    .vote span{color:var(--yellow)}
+    .download-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-top:18px;
+    }
+    .download-btn{
+      display:inline-block;
+      text-decoration:none;
+      line-height:0;
+    }
+    .download-btn img{
+      width:min(420px, 72vw);
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+    .legal{
+      text-align:center;
+      margin-top:28px;
+      font-size:11px;
+      line-height:1.5;
+      opacity:.95;
+    }
+    @media (max-width: 640px){
+      .content{width:min(900px, calc(100% - 32px)); padding:32px 0 56px}
+      p{margin-bottom:22px}
+      .vote{margin-bottom:40px}
+      .download-btn img{width:min(360px, 86vw)}
+      .legal{font-size:10px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-label="Luisa Cela 1301">
+      <img src="assets/topo-site.png" alt="Luisa Cela 1301 com apoios políticos">
+    </section>
+
+    <section class="content">
+      <div class="copy">
+        <h1>FEDERAL É ELA!</h1>
+        <div class="rule"></div>
+
+        <p>
+          Luisa Cela é a número 1 do Lula no Ceará. Sobralense, mulher, mãe e
+          candidata à deputada federal, filha de Izolda Cela, tem como maior
+          inspiração na política a mulher que transformou a educação do nosso estado.
+        </p>
+
+        <div class="rule"></div>
+
+        <p>
+          Ao lado de Lula e Elmano, Luisa luta para que mais mulheres representem
+          a nossa gente em Brasília.
+        </p>
+
+        <div class="rule"></div>
+
+        <div class="vote">Vote <span>1301!</span></div>
+      </div>
+
+      <div class="download-wrap">
+        <a class="download-btn" href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs" target="_blank" rel="noopener noreferrer" aria-label="Baixar material de campanha">
+          <img src="assets/baixar-material.png" alt="Baixe nosso material de campanha. Clique aqui.">
+        </a>
+      </div>
+
+      <div class="legal">
+        Federação Brasil da Esperança (PT / PCdoB / PV)<br>
+        CNPJ: 68.454.969/0001-76 (Luisa Cela - PT)
+      </div>
+    </section>
+  </main>
+</body>
+</html>
