@@ -3,109 +3,352 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luisa Cela 1301</title>
-  <meta name="description" content="Luisa Cela 1301">
+  <title>Luisa Cela | Federal é ela | VOTE 1301 | PT Ceará</title>
+  <meta name="description" content="Luisa Cela: federal é ela! VOTE 1301. Por mais mulheres do Ceará no Congresso.">
+
   <style>
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      overflow-x: hidden;
+    :root{
+      --red:#d71920;
+      --red-dark:#b70e16;
+      --yellow:#ffd21a;
+      --green:#25ad3d;
+      --cream:#f6f0e7;
+      --white:#ffffff;
+      --black:#151515;
     }
 
-    .site {
-      position: relative;
-      width: 100%;
-      max-width: 1920px;
-      margin: 0 auto;
-      line-height: 0;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:var(--cream);
+      color:var(--black);
+      font-family:Arial, Helvetica, sans-serif;
     }
 
-    .site-art {
-      display: block;
-      width: 100%;
-      height: auto;
-      user-select: none;
-      -webkit-user-drag: none;
+    img{max-width:100%}
+
+    .hero{
+      background:#fff;
+      overflow:hidden;
     }
 
-    .button {
-      position: absolute;
-      z-index: 10;
-      display: block;
-      line-height: 0;
-      cursor: pointer;
-      transform: scale(1);
-      transition: transform 150ms ease-out;
-      will-change: transform;
+    .hero img{
+      width:100%;
+      display:block;
     }
 
-    .button:hover {
-      transform: scale(1.05);
+    .red{
+      background:linear-gradient(180deg,var(--red) 0%,var(--red-dark) 100%);
+      color:#fff;
     }
 
-    .button img {
-      display: block;
-      width: 100%;
-      height: auto;
-      pointer-events: none;
-      user-select: none;
-      -webkit-user-drag: none;
+    .section{
+      padding:90px 24px;
     }
 
-    
-    .btn-whatsapp {
-      left: 49.125000%;
-      top: 19.980772%;
-      width: 22.156250%;
-      transform-origin: center center;
+    .wrap{
+      width:min(1040px,100%);
+      margin:0 auto;
     }
-    .btn-apoie {
-      left: 65.250000%;
-      top: 18.442557%;
-      width: 22.156250%;
-      transform-origin: center center;
+
+    .intro{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:72px;
+      align-items:start;
     }
-    .btn-material {
-      left: 79.843750%;
-      top: 17.016504%;
-      width: 22.187500%;
-      transform-origin: right center;
+
+    .eyebrow{
+      margin:0 0 16px;
+      color:var(--yellow);
+      font-size:14px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3,p{margin-top:0}
+
+    h1{
+      margin-bottom:24px;
+      max-width:760px;
+      font-size:clamp(42px,6vw,78px);
+      line-height:.98;
+      letter-spacing:-.045em;
+    }
+
+    h2{
+      margin-bottom:24px;
+      font-size:clamp(34px,4vw,56px);
+      line-height:1;
+      letter-spacing:-.035em;
+    }
+
+    .lead{
+      margin:0;
+      max-width:720px;
+      font-size:clamp(20px,2.1vw,29px);
+      line-height:1.42;
+      font-weight:600;
+    }
+
+    .quote{
+      margin:0;
+      border-left:4px solid var(--yellow);
+      padding-left:24px;
+      font-size:clamp(22px,2.5vw,34px);
+      line-height:1.3;
+      font-weight:800;
+    }
+
+    .bio{
+      background:#fff;
+    }
+
+    .bio p{
+      max-width:850px;
+      font-size:clamp(18px,1.7vw,23px);
+      line-height:1.58;
+    }
+
+    .pillars{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:42px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:18px;
+      padding:28px;
+      border:1px solid rgba(0,0,0,.07);
+    }
+
+    .card h3{
+      margin-bottom:12px;
+      color:var(--red);
+      font-size:24px;
+    }
+
+    .card p{
+      margin:0;
+      font-size:17px;
+      line-height:1.5;
+    }
+
+    .participate{
+      background:var(--yellow);
+    }
+
+    .participate .eyebrow{
+      color:var(--red);
+    }
+
+    .participate p{
+      max-width:760px;
+      font-size:clamp(18px,1.7vw,23px);
+      line-height:1.52;
+    }
+
+    .actions{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+      margin-top:46px;
+      align-items:center;
+    }
+
+    .action{
+      display:block;
+      text-decoration:none;
+      transform:scale(1);
+      transform-origin:center;
+      transition:transform 150ms ease-out;
+    }
+
+    .action:hover{
+      transform:scale(1.05);
+    }
+
+    .action img{
+      width:100%;
+      display:block;
+    }
+
+    .closing{
+      background:var(--green);
+      color:#fff;
+      text-align:center;
+    }
+
+    .closing h2{
+      margin-bottom:18px;
+      font-size:clamp(40px,5vw,70px);
+      line-height:.98;
+    }
+
+    .closing p{
+      margin:0 auto;
+      max-width:760px;
+      font-size:clamp(20px,2vw,28px);
+      line-height:1.4;
+    }
+
+    footer{
+      padding:36px 24px;
+      background:#111;
+      color:#fff;
+      text-align:center;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    @media(max-width:900px){
+      .intro{
+        grid-template-columns:1fr;
+        gap:44px;
+      }
+
+      .pillars{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .actions{
+        grid-template-columns:1fr;
+        max-width:520px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+    }
+
+    @media(max-width:560px){
+      .section{
+        padding:66px 20px;
+      }
+
+      .pillars{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
-<body>
-  <main class="site">
-    <img class="site-art"
-         src="assets/site-luisa.webp"
-         alt="Luisa Cela 1301"
-         width="3200"
-         height="6241">
 
-    
-    <a class="button btn-whatsapp"
-       href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadPfRCwoqA3ROC4AYEtM8HEzbHS3acD90bz9FXvYaJbGlsUCZdIgKHcY_WY5Q_aem_D4L9X0X9sc_2Q7dwDuprMA"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Faça parte do nosso grupo no WhatsApp">
-      <img src="assets/btn-whatsapp.png" alt="">
-    </a>
-    <a class="button btn-apoie"
-       href="https://queroapoiar.com.br/luisacela"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Apoie nossa campanha">
-      <img src="assets/btn-apoie.png" alt="">
-    </a>
-    <a class="button btn-material"
-       href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Baixe nosso material de campanha">
-      <img src="assets/btn-material.png" alt="">
-    </a>
-  </main>
+<body>
+
+  <header class="hero">
+    <img src="assets/topo-site.png" alt="Luisa Cela 1301">
+  </header>
+
+  <section class="section red">
+    <div class="wrap intro">
+      <div>
+        <p class="eyebrow">Federal é ela</p>
+        <h1>Luisa Cela 1301.<br>A número 1 do Lula no Ceará.</h1>
+        <p class="lead">
+          Por mais tempo, mais dinheiro e mais oportunidade para as mulheres do Ceará.
+        </p>
+      </div>
+
+      <p class="quote">
+        “Eu não quero um Ceará onde poucos tenham muito. Quero um Ceará onde todos possam ter tudo.”
+      </p>
+    </div>
+  </section>
+
+  <section class="section bio">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#d71920">Quem é Luisa?</p>
+      <h2>De Sobral para o Ceará inteiro.</h2>
+
+      <p>
+        Luisa é psicóloga e gestora pública. Começou sua trajetória ainda no movimento estudantil e construiu sua experiência em políticas de juventude, cultura e territórios.
+      </p>
+
+      <p>
+        Trabalhou nos Cucas, no Centro Cultural Bom Jardim e foi Secretária da Cultura do Ceará. Sua atuação é marcada pela defesa de políticas públicas que ampliem oportunidades, renda, dignidade e participação das mulheres na vida econômica e política.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#d71920">O que defende?</p>
+      <h2>Quatro eixos para fazer o Ceará avançar.</h2>
+
+      <div class="pillars">
+        <article class="card">
+          <h3>Mulheres</h3>
+          <p>Trabalho, renda, autonomia financeira e mais mulheres participando das decisões políticas.</p>
+        </article>
+
+        <article class="card">
+          <h3>Lula</h3>
+          <p>Defesa das políticas que melhoram a vida das famílias brasileiras e de um Brasil soberano.</p>
+        </article>
+
+        <article class="card">
+          <h3>Educação</h3>
+          <p>Fortalecer a educação pública e ampliar oportunidades para as juventudes.</p>
+        </article>
+
+        <article class="card">
+          <h3>Cultura e Territórios</h3>
+          <p>Cultura gerando trabalho, renda, convivência e oportunidades na periferia e no interior.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section participate">
+    <div class="wrap">
+      <p class="eyebrow">Participe</p>
+      <h2>Vem pra campanha da Luisa 1301.</h2>
+
+      <p>
+        Toda candidatura forte é construída com pessoas unidas nos seus territórios. Participe, contribua e ajude o 1301 a chegar mais longe.
+      </p>
+
+      <div class="actions">
+        <a class="action"
+           href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadPfRCwoqA3ROC4AYEtM8HEzbHS3acD90bz9FXvYaJbGlsUCZdIgKHcY_WY5Q_aem_D4L9X0X9sc_2Q7dwDuprMA"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="assets/btn-whatsapp.png" alt="Faça parte do nosso grupo no WhatsApp">
+        </a>
+
+        <a class="action"
+           href="https://queroapoiar.com.br/luisacela"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="assets/btn-apoie.png" alt="Apoie nossa campanha">
+        </a>
+
+        <a class="action"
+           href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="assets/btn-material.png" alt="Baixe nosso material de campanha">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section closing">
+    <div class="wrap">
+      <h2>Luisa Cela, 1301.<br>Federal é ela.</h2>
+      <p>
+        Mais mulheres do Ceará participando, decidindo e representando nossa gente em Brasília.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Este é o site oficial da campanha de Luisa Cela a deputada federal pelo PT do Ceará, número 1301.
+  </footer>
+
 </body>
 </html>
