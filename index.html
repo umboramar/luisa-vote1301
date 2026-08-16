@@ -8,13 +8,13 @@
 
   <style>
     :root{
-      --red:#d71920;
-      --red-dark:#b70e16;
-      --yellow:#ffd21a;
-      --green:#25ad3d;
-      --cream:#f6f0e7;
+      --red:#ef2528;
+      --red-dark:#d91f23;
+      --yellow:#ffd20a;
+      --green:#23ac38;
       --white:#ffffff;
-      --black:#151515;
+      --ink:#181818;
+      --soft:#f7f5f0;
     }
 
     *{box-sizing:border-box}
@@ -22,217 +22,262 @@
 
     body{
       margin:0;
-      background:var(--cream);
-      color:var(--black);
-      font-family:Arial, Helvetica, sans-serif;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--white);
+      overflow-x:hidden;
     }
 
-    img{max-width:100%}
-
     .hero{
-      background:#fff;
+      position:relative;
+      width:100%;
+      background:var(--red);
+      line-height:0;
       overflow:hidden;
     }
 
-    .hero img{
-      width:100%;
+    .hero-art{
       display:block;
+      width:100%;
+      height:auto;
     }
 
-    .red{
-      background:linear-gradient(180deg,var(--red) 0%,var(--red-dark) 100%);
-      color:#fff;
+    /* Clickable areas over the three buttons already designed in Illustrator. */
+    .hero-link{
+      position:absolute;
+      display:block;
+      z-index:5;
+      border-radius:18px;
     }
 
-    .section{
-      padding:90px 24px;
+    .hero-link:focus-visible{
+      outline:4px solid var(--yellow);
+      outline-offset:4px;
+    }
+
+    .whatsapp{left:49.1%; top:52.4%; width:16.4%; height:18.5%;}
+    .apoie{left:65.2%; top:48.2%; width:15.1%; height:17.5%;}
+    .material{left:79.6%; top:44.2%; width:18.4%; height:18.5%;}
+
+    .red-section{
+      position:relative;
+      margin-top:-1px;
+      padding:84px 24px 124px;
+      background:var(--red);
+      color:var(--white);
+    }
+
+    .red-section::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-72px;
+      width:100%;
+      height:145px;
+      background:var(--red);
+      clip-path:polygon(0 0,100% 0,100% 12%,0 100%);
+      z-index:0;
     }
 
     .wrap{
-      width:min(1040px,100%);
+      position:relative;
+      z-index:1;
+      width:min(1100px,100%);
       margin:0 auto;
     }
 
-    .intro{
+    .intro-grid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
+      grid-template-columns:.82fr 1.18fr;
       gap:72px;
       align-items:start;
     }
 
-    .eyebrow{
+    .label{
       margin:0 0 16px;
       color:var(--yellow);
-      font-size:14px;
-      line-height:1;
       font-weight:900;
-      letter-spacing:.12em;
+      font-size:14px;
+      letter-spacing:.09em;
       text-transform:uppercase;
     }
 
     h1,h2,h3,p{margin-top:0}
 
     h1{
-      margin-bottom:24px;
-      max-width:760px;
-      font-size:clamp(42px,6vw,78px);
-      line-height:.98;
-      letter-spacing:-.045em;
-    }
-
-    h2{
-      margin-bottom:24px;
-      font-size:clamp(34px,4vw,56px);
-      line-height:1;
+      margin-bottom:0;
+      font-size:clamp(36px,4.6vw,66px);
+      line-height:1.02;
       letter-spacing:-.035em;
-    }
-
-    .lead{
-      margin:0;
-      max-width:720px;
-      font-size:clamp(20px,2.1vw,29px);
-      line-height:1.42;
-      font-weight:600;
-    }
-
-    .quote{
-      margin:0;
-      border-left:4px solid var(--yellow);
-      padding-left:24px;
-      font-size:clamp(22px,2.5vw,34px);
-      line-height:1.3;
-      font-weight:800;
-    }
-
-    .bio{
-      background:#fff;
+      text-transform:uppercase;
     }
 
     .bio p{
-      max-width:850px;
-      font-size:clamp(18px,1.7vw,23px);
-      line-height:1.58;
+      margin:0 0 24px;
+      font-size:clamp(18px,1.55vw,23px);
+      line-height:1.55;
+      font-weight:500;
     }
 
-    .pillars{
+    .quote{
+      margin-top:38px;
+      padding-left:24px;
+      border-left:4px solid var(--yellow);
+      font-size:clamp(22px,2vw,30px) !important;
+      line-height:1.35 !important;
+      font-weight:800 !important;
+    }
+
+    .proposals{
+      padding:150px 24px 104px;
+      background:var(--white);
+      color:var(--red);
+    }
+
+    .proposals h2{
+      margin-bottom:18px;
+      font-size:clamp(38px,4.2vw,58px);
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:-.035em;
+    }
+
+    .proposal-lead{
+      max-width:790px;
+      margin-bottom:42px;
+      color:#555;
+      font-size:clamp(18px,1.5vw,22px);
+      line-height:1.55;
+    }
+
+    .grid{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      margin-top:42px;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
     }
 
     .card{
-      background:#fff;
-      border-radius:18px;
-      padding:28px;
-      border:1px solid rgba(0,0,0,.07);
+      min-height:190px;
+      padding:30px;
+      border:2px solid var(--red);
+      background:var(--white);
     }
 
     .card h3{
-      margin-bottom:12px;
+      margin-bottom:14px;
       color:var(--red);
-      font-size:24px;
+      font-size:26px;
+      text-transform:uppercase;
     }
 
     .card p{
       margin:0;
+      color:#3a3a3a;
       font-size:17px;
       line-height:1.5;
     }
 
     .participate{
-      background:var(--yellow);
+      padding:92px 24px;
+      background:var(--soft);
+      text-align:center;
     }
 
-    .participate .eyebrow{
+    .participate h2{
+      margin-bottom:16px;
       color:var(--red);
+      font-size:clamp(34px,4vw,54px);
+      line-height:1;
+      text-transform:uppercase;
     }
 
     .participate p{
       max-width:760px;
-      font-size:clamp(18px,1.7vw,23px);
-      line-height:1.52;
+      margin:0 auto 32px;
+      font-size:clamp(18px,1.5vw,22px);
+      line-height:1.5;
     }
 
-    .actions{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:26px;
-      margin-top:46px;
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
+    }
+
+    .cta{
+      display:inline-flex;
       align-items:center;
-    }
-
-    .action{
-      display:block;
+      justify-content:center;
+      min-height:54px;
+      padding:0 26px;
       text-decoration:none;
-      transform:scale(1);
-      transform-origin:center;
-      transition:transform 150ms ease-out;
+      font-weight:900;
+      text-transform:uppercase;
+      border:2px solid var(--red);
+      color:var(--red);
+      background:#fff;
+      transition:transform .15s ease;
     }
 
-    .action:hover{
-      transform:scale(1.05);
+    .cta.primary{
+      color:#fff;
+      background:var(--green);
+      border-color:var(--green);
     }
 
-    .action img{
-      width:100%;
-      display:block;
-    }
+    .cta:hover{transform:scale(1.03)}
 
     .closing{
+      padding:86px 24px 92px;
       background:var(--green);
       color:#fff;
       text-align:center;
     }
 
     .closing h2{
-      margin-bottom:18px;
-      font-size:clamp(40px,5vw,70px);
+      margin-bottom:14px;
+      font-size:clamp(42px,5vw,72px);
       line-height:.98;
+      text-transform:uppercase;
     }
 
     .closing p{
       margin:0 auto;
       max-width:760px;
-      font-size:clamp(20px,2vw,28px);
-      line-height:1.4;
+      font-size:clamp(19px,1.8vw,26px);
+      line-height:1.45;
     }
 
     footer{
-      padding:36px 24px;
-      background:#111;
-      color:#fff;
+      padding:38px 24px 42px;
+      background:#fff;
+      color:var(--red);
       text-align:center;
-      font-size:13px;
-      line-height:1.6;
+      font-size:12px;
+      line-height:1.65;
+      font-weight:700;
     }
 
-    @media(max-width:900px){
-      .intro{
+    @media(max-width:820px){
+      .whatsapp{left:48.4%; top:51.7%; width:17.4%; height:19.5%;}
+      .apoie{left:64.6%; top:47.5%; width:16%; height:18.5%;}
+      .material{left:79%; top:43.5%; width:19.3%; height:19.5%;}
+
+      .intro-grid{
         grid-template-columns:1fr;
-        gap:44px;
+        gap:42px;
       }
 
-      .pillars{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .actions{
-        grid-template-columns:1fr;
-        max-width:520px;
-        margin-left:auto;
-        margin-right:auto;
-      }
+      .grid{grid-template-columns:1fr}
     }
 
     @media(max-width:560px){
-      .section{
-        padding:66px 20px;
-      }
-
-      .pillars{
-        grid-template-columns:1fr;
-      }
+      .red-section{padding:58px 20px 92px}
+      .red-section::after{height:95px;bottom:-46px}
+      .proposals{padding:105px 20px 72px}
+      .participate,.closing{padding-left:20px;padding-right:20px}
+      .card{min-height:0}
     }
   </style>
 </head>
@@ -240,116 +285,135 @@
 <body>
 
   <header class="hero">
-    <img src="assets/topo-site.png" alt="Luisa Cela 1301">
+    <img class="hero-art" src="assets/hero-luisa.webp" alt="Luisa Cela 1301 com Lula, Izolda, Camilo e Elmano">
+
+    <a class="hero-link whatsapp"
+       href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadPfRCwoqA3ROC4AYEtM8HEzbHS3acD90bz9FXvYaJbGlsUCZdIgKHcY_WY5Q_aem_D4L9X0X9sc_2Q7dwDuprMA"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Faça parte do nosso grupo no WhatsApp"></a>
+
+    <a class="hero-link apoie"
+       href="https://queroapoiar.com.br/luisacela"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Apoie nossa campanha"></a>
+
+    <a class="hero-link material"
+       href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Baixe nosso material de campanha"></a>
   </header>
 
-  <section class="section red">
-    <div class="wrap intro">
+  <section class="red-section">
+    <div class="wrap intro-grid">
       <div>
-        <p class="eyebrow">Federal é ela</p>
-        <h1>Luisa Cela 1301.<br>A número 1 do Lula no Ceará.</h1>
-        <p class="lead">
-          Por mais tempo, mais dinheiro e mais oportunidade para as mulheres do Ceará.
-        </p>
+        <p class="label">Quem é Luisa?</p>
+        <h1>Me chamo Luisa Cela e esse é meu time.</h1>
       </div>
 
-      <p class="quote">
-        “Eu não quero um Ceará onde poucos tenham muito. Quero um Ceará onde todos possam ter tudo.”
-      </p>
+      <div class="bio">
+        <p>
+          Luisa é de Sobral. Psicóloga formada pela UFC, com mestrado em Saúde da Família,
+          começou sua militância ainda estudante. Sua trajetória passou pelos Cucas,
+          pelo Centro Cultural Bom Jardim e pela gestão pública do Ceará.
+        </p>
+
+        <p>
+          Como Secretária da Cultura, trabalhou para fazer políticas públicas chegarem
+          aos territórios e ampliar oportunidades. Sua atuação conecta cultura,
+          educação, juventude, trabalho, renda e participação das mulheres.
+        </p>
+
+        <p class="quote">
+          “Meu sonho é ver todos os cearenses, especialmente as mulheres,
+          melhorando de vida, com trabalho, renda e dignidade.”
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="section bio">
+  <section class="proposals">
     <div class="wrap">
-      <p class="eyebrow" style="color:#d71920">Quem é Luisa?</p>
-      <h2>De Sobral para o Ceará inteiro.</h2>
-
-      <p>
-        Luisa é psicóloga e gestora pública. Começou sua trajetória ainda no movimento estudantil e construiu sua experiência em políticas de juventude, cultura e territórios.
+      <p class="label" style="color:#ef2528">Federal é ela</p>
+      <h2>Nossas propostas</h2>
+      <p class="proposal-lead">
+        Luisa quer representar o Ceará em Brasília com propostas ligadas à vida real,
+        ampliando oportunidades e fortalecendo políticas que já transformam o estado.
       </p>
 
-      <p>
-        Trabalhou nos Cucas, no Centro Cultural Bom Jardim e foi Secretária da Cultura do Ceará. Sua atuação é marcada pela defesa de políticas públicas que ampliem oportunidades, renda, dignidade e participação das mulheres na vida econômica e política.
-      </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <p class="eyebrow" style="color:#d71920">O que defende?</p>
-      <h2>Quatro eixos para fazer o Ceará avançar.</h2>
-
-      <div class="pillars">
+      <div class="grid">
         <article class="card">
           <h3>Mulheres</h3>
-          <p>Trabalho, renda, autonomia financeira e mais mulheres participando das decisões políticas.</p>
+          <p>
+            Trabalho, renda, autonomia financeira e mais mulheres participando
+            das decisões políticas.
+          </p>
         </article>
 
         <article class="card">
           <h3>Lula</h3>
-          <p>Defesa das políticas que melhoram a vida das famílias brasileiras e de um Brasil soberano.</p>
+          <p>
+            Defesa das políticas que melhoram a vida das famílias brasileiras
+            e de um Brasil soberano.
+          </p>
         </article>
 
         <article class="card">
           <h3>Educação</h3>
-          <p>Fortalecer a educação pública e ampliar oportunidades para as juventudes.</p>
+          <p>
+            Fortalecer a educação pública e ampliar oportunidades para
+            as juventudes do Ceará.
+          </p>
         </article>
 
         <article class="card">
           <h3>Cultura e Territórios</h3>
-          <p>Cultura gerando trabalho, renda, convivência e oportunidades na periferia e no interior.</p>
+          <p>
+            Cultura gerando trabalho, renda, convivência e oportunidades
+            na periferia e no interior.
+          </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section participate">
+  <section class="participate">
     <div class="wrap">
-      <p class="eyebrow">Participe</p>
+      <p class="label" style="color:#ef2528">Participe</p>
       <h2>Vem pra campanha da Luisa 1301.</h2>
-
       <p>
-        Toda candidatura forte é construída com pessoas unidas nos seus territórios. Participe, contribua e ajude o 1301 a chegar mais longe.
+        Toda candidatura forte é construída com gente participando.
+        Entre no grupo, contribua com a campanha ou compartilhe nossos materiais.
       </p>
 
-      <div class="actions">
-        <a class="action"
+      <div class="cta-row">
+        <a class="cta primary"
            href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadPfRCwoqA3ROC4AYEtM8HEzbHS3acD90bz9FXvYaJbGlsUCZdIgKHcY_WY5Q_aem_D4L9X0X9sc_2Q7dwDuprMA"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img src="assets/btn-whatsapp.png" alt="Faça parte do nosso grupo no WhatsApp">
-        </a>
+           target="_blank" rel="noopener noreferrer">Grupo no WhatsApp</a>
 
-        <a class="action"
+        <a class="cta"
            href="https://queroapoiar.com.br/luisacela"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img src="assets/btn-apoie.png" alt="Apoie nossa campanha">
-        </a>
+           target="_blank" rel="noopener noreferrer">Apoie a campanha</a>
 
-        <a class="action"
+        <a class="cta"
            href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs"
-           target="_blank"
-           rel="noopener noreferrer">
-          <img src="assets/btn-material.png" alt="Baixe nosso material de campanha">
-        </a>
+           target="_blank" rel="noopener noreferrer">Baixe o material</a>
       </div>
     </div>
   </section>
 
-  <section class="section closing">
+  <section class="closing">
     <div class="wrap">
-      <h2>Luisa Cela, 1301.<br>Federal é ela.</h2>
+      <h2>Luisa Cela 1301.<br>Federal é ela.</h2>
       <p>
-        Mais mulheres do Ceará participando, decidindo e representando nossa gente em Brasília.
+        Por mais mulheres do Ceará participando, decidindo
+        e representando nossa gente em Brasília.
       </p>
     </div>
   </section>
 
   <footer>
-    Este é o site oficial da campanha de Luisa Cela a deputada federal pelo PT do Ceará, número 1301.<br>
     Federação Brasil da Esperança (PT / PCdoB / PV)<br>
-    CNPJ: 68.454.969/0001-76
+    CNPJ: 68.454.969/0001-76 (Luisa Cela - PT)
   </footer>
 
 </body>
