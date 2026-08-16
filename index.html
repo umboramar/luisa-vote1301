@@ -2,149 +2,160 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Luisa Cela | Federal é ela | VOTE 1301 | PT Ceará</title>
-  <meta name="description" content="Luisa Cela: federal é ela! VOTE 1301. Por mais mulheres do Ceará no Congresso.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ef252a">
+  <meta name="description" content="Luisa Cela 1301. Federal é ela.">
+  <title>Luisa Cela 1301 | Federal é ela</title>
+  <link rel="preload" as="image" href="assets/site-luisa.webp" type="image/webp">
   <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:#fff}
-    body{font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-    .page{
-      position:relative;
-      width:100%;
-      max-width:1920px;
-      margin:0 auto;
-      line-height:0;
-      overflow:hidden;
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #ef252a; }
+    body { font-family: Arial, Helvetica, sans-serif; }
+    .site { width: 100%; overflow: hidden; }
+    .artboard {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      line-height: 0;
+      background: #ef252a;
     }
-    .art{
-      display:block;
-      width:100%;
-      height:auto;
-      user-select:none;
-      -webkit-user-drag:none;
-    }
-
-    /* Texto real inserido sem alterar a composição do Illustrator */
-    .bio-copy,
-    .proposal-copy{
-      position:absolute;
-      z-index:3;
-      transform:rotate(-7deg);
-      transform-origin:left top;
-      line-height:1.48;
+    .artboard picture,
+    .artboard img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
-    .bio-copy{
-      left:9.2%;
-      top:36.8%;
-      width:79%;
-      color:#fff;
-      font-size:clamp(10px,1.12vw,22px);
-      font-weight:500;
-      font-style:italic;
+    /*
+      Hotspots invisiveis sobre a arte.
+      As coordenadas abaixo foram recalibradas a partir das areas azuis
+      indicadas na captura enviada pelo usuario.
+    */
+    .hotspot {
+      position: absolute;
+      display: block;
+      z-index: 10;
+      text-decoration: none;
+      cursor: pointer;
+      background: transparent;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hotspot:hover,
+    .hotspot:focus,
+    .hotspot:focus-visible,
+    .hotspot:active {
+      outline: none;
+      box-shadow: none;
+      background: transparent;
     }
 
-    .bio-copy p{
-      margin:0 0 1.15em;
+    /* 1. Faca parte do grupo de WhatsApp */
+    .hotspot-whatsapp {
+      left: 53.762%;
+      top: 21.450%;
+      width: 11.794%;
+      height: 4.833%;
+      clip-path: polygon(99.27% 0%, 0% 26.03%, 1.09% 100%, 100% 74.43%);
     }
 
-    .bio-copy strong{
-      font-weight:800;
+    /* 2. Apoie nossa campanha */
+    .hotspot-apoio {
+      left: 69.817%;
+      top: 20.016%;
+      width: 11.880%;
+      height: 4.833%;
+      clip-path: polygon(98.91% 0%, 0% 26.03%, 1.45% 100%, 100% 73.97%);
     }
 
-    .proposal-copy{
-      left:9.1%;
-      top:58.1%;
-      width:80%;
-      color:#ef2528;
-      font-size:clamp(10px,1.08vw,21px);
-      font-weight:600;
-      font-style:italic;
+    /* 3. Baixe nosso material de campanha */
+    .hotspot-material {
+      left: 84.452%;
+      top: 18.515%;
+      width: 11.880%;
+      height: 4.833%;
+      clip-path: polygon(98.55% 0%, 0% 26.03%, 1.45% 100%, 100% 73.97%);
     }
 
-    .proposal-copy p{
-      margin:0;
+    /* 4. YouTube: box amarelo inteiro + chamada de texto a direita */
+    .hotspot-youtube {
+      left: 55.570%;
+      top: 24.032%;
+      width: 39.300%;
+      height: 13.650%;
+      clip-path: polygon(
+        93.9% 0%,
+        0% 29.3%,
+        0.7% 87.0%,
+        77.8% 64.5%,
+        78.0% 70.5%,
+        100% 70.5%,
+        100% 100%,
+        78.0% 100%,
+        78.0% 78.0%,
+        100% 71.5%,
+        100% 58.8%
+      );
     }
 
-    /* Áreas clicáveis exatamente sobre os 3 botões desenhados no Illustrator */
-    .hotspot{
-      position:absolute;
-      z-index:5;
-      display:block;
-    }
-
-    .whatsapp{left:52.7%;top:19.5%;width:15.4%;height:7.7%}
-    .apoie{left:68.5%;top:19.1%;width:14.5%;height:7.4%}
-    .material{left:82.3%;top:18.6%;width:16.5%;height:7.8%}
-
-    .hotspot:focus-visible{
-      outline:3px solid #ffd20a;
-      outline-offset:3px;
-    }
-
-    @media(max-width:700px){
-      .bio-copy{
-        left:8.8%;
-        top:36.5%;
-        width:82%;
-        font-size:clamp(8px,1.18vw,12px);
-      }
-
-      .proposal-copy{
-        left:8.8%;
-        top:57.9%;
-        width:82%;
-        font-size:clamp(8px,1.13vw,12px);
-      }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <img class="art" src="assets/layout-luisa.webp" alt="Luisa Cela 1301">
+  <main class="site" aria-label="Site da campanha Luisa Cela 1301">
+    <section class="artboard" aria-label="Luisa Cela 1301. Federal e ela.">
+      <picture>
+        <source srcset="assets/site-luisa.webp" type="image/webp">
+        <img src="assets/site-luisa.jpg" width="1920" height="3745" alt="Landing page da campanha Luisa Cela 1301, com apresentacao da trajetoria, propostas e formas de participar.">
+      </picture>
 
-    <div class="bio-copy">
-      <p>
-        Luisa é de Sobral. Psicóloga formada pela UFC, com mestrado em Saúde da Família,
-        começou sua militância ainda estudante e construiu sua trajetória em políticas
-        de juventude, cultura e territórios.
-      </p>
-      <p>
-        Trabalhou nos Cucas, no Centro Cultural Bom Jardim e foi Secretária da Cultura
-        do Ceará. Sua atuação é marcada pela defesa de políticas públicas que ampliem
-        oportunidades, renda, dignidade e participação das mulheres.
-      </p>
-      <p>
-        <strong>Seu projeto é levar essa experiência para Brasília e representar o Ceará
-        com presença, trabalho e compromisso com a vida real das pessoas.</strong>
-      </p>
-    </div>
+      <a
+        class="hotspot hotspot-whatsapp"
+        href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Faca parte do nosso grupo de WhatsApp">
+        <span class="sr-only">Faca parte do nosso grupo de WhatsApp</span>
+      </a>
 
-    <div class="proposal-copy">
-      <p>
-        Luisa quer representar o Ceará em Brasília com quatro prioridades:
-        autonomia econômica e participação política para as mulheres; defesa das
-        políticas do governo Lula; fortalecimento da educação pública e das oportunidades
-        para as juventudes; e cultura e territórios como caminhos para trabalho, renda
-        e desenvolvimento.
-      </p>
-    </div>
+      <a
+        class="hotspot hotspot-apoio"
+        href="https://queroapoiar.com.br/luisacela"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Apoie nossa campanha">
+        <span class="sr-only">Apoie nossa campanha</span>
+      </a>
 
-    <a class="hotspot whatsapp"
-       href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadPfRCwoqA3ROC4AYEtM8HEzbHS3acD90bz9FXvYaJbGlsUCZdIgKHcY_WY5Q_aem_D4L9X0X9sc_2Q7dwDuprMA"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Faça parte do nosso grupo no WhatsApp"></a>
+      <a
+        class="hotspot hotspot-material"
+        href="https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Baixe nosso material de campanha">
+        <span class="sr-only">Baixe nosso material de campanha</span>
+      </a>
 
-    <a class="hotspot apoie"
-       href="https://queroapoiar.com.br/luisacela"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Apoie nossa campanha"></a>
-
-    <a class="hotspot material"
-       href="https://drive.google.com/open?id=16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8&usp=drive_fs"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Baixe nosso material de campanha"></a>
+      <a
+        class="hotspot hotspot-youtube"
+        href="https://www.youtube.com/@luisacelaoficial"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Acesse nosso canal do YouTube">
+        <span class="sr-only">Acesse nosso canal do YouTube</span>
+      </a>
+    </section>
   </main>
 </body>
 </html>
