@@ -1,40 +1,8 @@
-QA FINAL - SITE LUISA CELA 1301
-
-Estrutura:
-PASS - index.html presente
-PASS - CNAME presente: www.luisacela.com.br
-PASS - .nojekyll presente
-PASS - favicon.png presente
-PASS - assets desktop e mobile presentes
-
-Responsividade:
-PASS - desktop a partir de 768 px
-PASS - mobile ate 767 px
-PASS - desktop usa artboard 1920 x 3745
-PASS - mobile usa artboard 380 x 5533, com exportacao 2x de 760 x 11066
-
-Links configurados em desktop e mobile:
-PASS - WhatsApp
-https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t
-
-PASS - Apoie nossa campanha
-https://queroapoiar.com.br/luisacela
-
-PASS - Material de campanha
-https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8
-
-PASS - YouTube
-https://www.youtube.com/@luisacelaoficial
-
-Hotspots:
-PASS - 4 areas clicaveis independentes no desktop
-PASS - 4 areas clicaveis independentes no mobile
-PASS - areas invisiveis, sem borda ou overlay visual
-
-Servidor local:
-PASS - index.html retornou HTTP 200
-PASS - asset mobile retornou HTTP 200
-PASS - favicon retornou HTTP 200
-
-Observacao:
-A tentativa de screenshot automatizado via Chromium no ambiente de validacao nao concluiu por falha do Chromium/DBus do proprio ambiente. As artes e hotspots foram conferidos diretamente sobre os arquivos finais e a estrutura HTML foi validada.
+QA realizado:
+- HTML parseado sem referências locais ausentes.
+- 4 links no desktop e os mesmos 4 links no mobile.
+- Desktop baseado no artboard 1920 x 3745 mais recente.
+- Mobile baseado no artboard 380 x 5533 mais recente.
+- Assets mobile 1x e 2x incluídos.
+- Breakpoint em 767px.
+- CNAME preservado para www.luisacela.com.br.

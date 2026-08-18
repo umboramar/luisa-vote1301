@@ -1,18 +1,9 @@
-# Site Luisa Cela 1301
+# Luisa Cela 1301
+Pacote estático para GitHub Pages.
 
-Pacote estático pronto para GitHub Pages.
+- Desktop: layout do artboard desktop mais recente do Illustrator.
+- Mobile: layout do artboard mobile mais recente do Illustrator.
+- Breakpoint: 767px.
+- Os quatro links da campanha possuem hotspots independentes em desktop e mobile.
 
-## Estrutura
-
-- `index.html`: página principal responsiva.
-- `assets/`: artes desktop e mobile otimizadas.
-- `favicon.png`: favicon do site.
-- `CNAME`: domínio `www.luisacela.com.br`.
-- `.nojekyll`: evita processamento Jekyll no GitHub Pages.
-- `robots.txt`: permite indexação.
-
-## Publicação
-
-Envie todo o conteúdo desta pasta para a raiz do repositório publicado pelo GitHub Pages, mantendo os nomes e a estrutura de pastas exatamente como estão.
-
-O site troca automaticamente para o artboard mobile em telas com largura de até 767 px.
+Para publicar, envie todos os arquivos e a pasta assets para a raiz do repositório.
