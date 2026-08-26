@@ -142,26 +142,29 @@
 
 
     /* =========================
-       NOVOS BOTÕES
+       BOTÕES DO TOPO
        ========================= */
 
     .quick-links {
       position: absolute;
 
-      top: 10px;
-      right: 13px;
+      top: 16px;
+      left: 50%;
+
+      transform: translateX(-50%);
 
       z-index: 50;
 
+      width: max-content;
+      max-width: calc(100% - 24px);
+
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
 
-      gap: 4px;
+      gap: 8px;
 
       flex-wrap: wrap;
-
-      max-width: 62%;
 
       line-height: normal;
     }
@@ -171,28 +174,26 @@
       align-items: center;
       justify-content: center;
 
-      min-height: 21px;
+      min-height: 42px;
 
-      padding: 5px 8px;
+      padding: 10px 16px;
 
-      background: rgba(255, 255, 255, 0.62);
+      background: rgba(255, 255, 255, 0.12);
 
-      color: #d91f24;
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.58);
+      border: 2px solid rgba(255, 255, 255, 0.95);
 
       border-radius: 999px;
+
+      color: #ffffff;
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-      font-size: 7.7px;
+      font-size: 15.4px;
 
-      font-weight: 700;
+      font-weight: 800;
 
       line-height: 1;
 
@@ -206,13 +207,9 @@
 
       cursor: pointer;
 
-      box-shadow:
-        0 1px 5px
-        rgba(0, 0, 0, 0.10);
+      backdrop-filter: blur(1.5px);
 
-      backdrop-filter: blur(3px);
-
-      -webkit-backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(1.5px);
 
       transition:
         background 0.15s ease,
@@ -220,16 +217,13 @@
     }
 
     .quick-links a:hover {
-      background:
-        rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.22);
 
       transform: translateY(-1px);
     }
 
     .quick-links a:focus-visible {
-      outline:
-        2px solid
-        rgba(255, 255, 255, 0.9);
+      outline: 2px solid rgba(255, 255, 255, 0.95);
 
       outline-offset: 2px;
     }
@@ -261,8 +255,7 @@
 
       touch-action: manipulation;
 
-      -webkit-tap-highlight-color:
-        transparent;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .hotspots .hit {
@@ -300,27 +293,30 @@
       }
 
       .quick-links {
-        top: 6px;
+        top: 10px;
 
-        left: 6px;
-        right: 6px;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: calc(100% - 12px);
 
         max-width: none;
 
         justify-content: center;
 
-        gap: 4px;
+        gap: 6px;
       }
 
       .quick-links a {
-        min-height: 20px;
+        min-height: 40px;
 
-        padding: 4px 7px;
+        padding: 8px 12px;
 
-        font-size: 6.7px;
+        font-size: 13.4px;
 
-        background:
-          rgba(255, 255, 255, 0.62);
+        border-width: 1.5px;
       }
 
     }
@@ -355,7 +351,7 @@
 
 
     <!-- =========================
-         NOVOS LINKS
+         LINKS DO TOPO
          ========================= -->
 
     <nav
@@ -450,12 +446,7 @@
 
           <polygon
             class="hit"
-            points="
-              1281,809
-              1030,862
-              1030,977
-              1281,924
-            "
+            points="1281,809 1030,862 1030,977 1281,924"
           ></polygon>
 
         </a>
@@ -473,12 +464,7 @@
 
           <polygon
             class="hit"
-            points="
-              1591,751
-              1340,804
-              1340,919
-              1591,866
-            "
+            points="1591,751 1340,804 1340,919 1591,866"
           ></polygon>
 
         </a>
@@ -496,12 +482,7 @@
 
           <polygon
             class="hit"
-            points="
-              1871,698
-              1620,751
-              1620,866
-              1871,813
-            "
+            points="1871,698 1620,751 1620,866 1871,813"
           ></polygon>
 
         </a>
