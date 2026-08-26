@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programa Participativo | Luísa</title>
+<meta name="description" content="Síntese editorial do Programa Participativo de Luísa: 8 eixos, 39 propostas e 13 prioridades." />
+<style>
+:root{
+  --red:#f4232f;
+  --red-deep:#d90f22;
+  --green:#23c55e;
+  --green-deep:#168d49;
+  --yellow:#ffd21a;
+  --ink:#161616;
+  --muted:#66615e;
+  --paper:#f7f4ed;
+  --white:#ffffff;
+  --line:#ded9cf;
+  --max:1180px;
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height:1.45;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(247,244,237,.92); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(22,22,22,.08);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:-.04em;text-transform:uppercase}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--red);color:#fff;clip-path:polygon(12% 0,100% 12%,88% 100%,0 86%);font-size:18px}
+.nav{display:flex;gap:26px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.nav a{opacity:.66}.nav a:hover{opacity:1}
+.hero{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-110px;bottom:-150px;width:520px;height:320px;background:var(--yellow);transform:rotate(-7deg);clip-path:polygon(12% 0,100% 6%,90% 100%,0 86%)}
+.hero:before{content:"";position:absolute;right:185px;top:56px;width:190px;height:86px;background:var(--green);transform:rotate(5deg);clip-path:polygon(7% 0,100% 12%,93% 100%,0 83%)}
+.hero-grid{min-height:680px;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center;padding:72px 0 108px;position:relative;z-index:2}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;margin-bottom:22px}
+.eyebrow:before{content:"";width:28px;height:6px;background:var(--yellow)}
+h1{font-size:clamp(58px,8vw,116px);line-height:.86;letter-spacing:-.075em;margin:0;max-width:850px;text-transform:uppercase;font-weight:950}
+.hero-lead{font-size:clamp(20px,2.4vw,31px);line-height:1.16;max-width:760px;margin:34px 0 0;font-weight:760;letter-spacing:-.025em}
+.hero-lead strong{color:var(--yellow)}
+.hero-side{align-self:end;padding-bottom:6px}
+.metric-stack{display:grid;gap:12px}
+.metric{background:#fff;color:var(--ink);padding:22px 24px;min-height:112px;display:flex;align-items:center;gap:20px;transform:rotate(-1.2deg)}
+.metric:nth-child(2){background:var(--yellow);transform:rotate(1.2deg)}
+.metric:nth-child(3){background:var(--green);transform:rotate(-.6deg)}
+.metric b{font-size:56px;line-height:1;font-weight:950;letter-spacing:-.06em}
+.metric span{font-size:14px;font-weight:900;text-transform:uppercase;line-height:1.1;letter-spacing:-.01em}
+.diagonal{height:64px;background:var(--paper);clip-path:polygon(0 66%,100% 0,100% 100%,0 100%);margin-top:-64px;position:relative;z-index:4}
+.section{padding:96px 0}
+.section.red{background:var(--red);color:#fff}
+.section.white{background:#fff}
+.section-head{display:grid;grid-template-columns:.42fr 1fr;gap:70px;margin-bottom:56px;align-items:start}
+.section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:var(--red)}
+.red .section-kicker{color:var(--yellow)}
+.section-title{font-size:clamp(38px,5vw,68px);line-height:.96;letter-spacing:-.055em;font-weight:950;margin:0;text-transform:uppercase;max-width:820px}
+.section-intro{font-size:20px;max-width:760px;margin:22px 0 0;color:var(--muted)}
+.red .section-intro{color:rgba(255,255,255,.8)}
+.lead-panel{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.lead-panel > div{padding:42px;background:#fff}
+.lead-panel blockquote{font-size:clamp(28px,3.2vw,44px);font-weight:900;line-height:1.02;letter-spacing:-.04em;margin:0}
+.lead-panel p{font-size:18px;margin:0;color:var(--muted)}
+.axes{display:grid;gap:0;border-top:1px solid var(--line)}
+.axis{display:grid;grid-template-columns:110px minmax(280px,.8fr) 1.25fr;gap:36px;padding:42px 0;border-bottom:1px solid var(--line);align-items:start}
+.axis-n{font-size:62px;font-weight:950;letter-spacing:-.07em;line-height:.85;color:var(--red)}
+.axis-title h3{font-size:29px;line-height:1.02;letter-spacing:-.04em;margin:0 0 12px;font-weight:930}
+.axis-title p{margin:0;color:var(--muted);font-size:16px}
+.axis-detail{border-left:4px solid var(--yellow);padding-left:24px}
+.axis-detail b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:10px}
+.axis-detail p{margin:0 0 18px;font-size:17px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:8px 11px;border:1px solid #cfc9be;background:#fff;font-size:12px;font-weight:800}
+.priority-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.28)}
+.priority{background:var(--red);padding:32px;min-height:286px;display:flex;flex-direction:column}
+.priority:nth-child(3n+2){background:#ef1d2b}.priority:nth-child(3n){background:#f62935}
+.priority-num{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.priority-num span:first-child{font-size:52px;line-height:1;font-weight:950;color:var(--yellow);letter-spacing:-.06em}
+.priority-num span:last-child{font-size:10px;border:1px solid rgba(255,255,255,.35);padding:7px 9px;text-transform:uppercase;letter-spacing:.12em;font-weight:850}
+.priority h3{font-size:26px;line-height:1.02;margin:0 0 14px;letter-spacing:-.035em;font-weight:930}
+.priority p{font-size:15px;color:rgba(255,255,255,.8);margin:auto 0 0}
+.synthesis{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start}
+.statement{font-size:clamp(43px,6vw,82px);line-height:.92;letter-spacing:-.06em;font-weight:950;text-transform:uppercase;margin:0}
+.statement em{font-style:normal;color:var(--red)}
+.verb-list{display:grid;border-top:1px solid var(--line)}
+.verb{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+.verb b{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--red)}
+.verb span{font-size:17px;color:var(--muted)}
+.next-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.next{padding:28px;background:var(--ink);color:#fff;min-height:205px}
+.next b{display:block;font-size:12px;color:var(--yellow);letter-spacing:.12em;text-transform:uppercase;margin-bottom:32px}
+.next p{font-size:18px;line-height:1.24;margin:0;font-weight:700}
+.footer{background:var(--ink);color:#fff;padding:38px 0}
+.footer .wrap{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer strong{font-size:19px;letter-spacing:-.02em}
+.footer small{opacity:.6;max-width:480px;text-align:right}
+.site-note{font-size:12px;color:var(--muted);margin-top:22px}
+@media(max-width:900px){
+  .nav{display:none}.hero-grid{grid-template-columns:1fr;gap:44px;min-height:auto;padding:60px 0 95px}.hero-side{max-width:520px}
+  .section-head{grid-template-columns:1fr;gap:12px}.lead-panel{grid-template-columns:1fr}.axis{grid-template-columns:70px 1fr;gap:18px}.axis-detail{grid-column:2}
+  .priority-grid{grid-template-columns:repeat(2,1fr)}.synthesis{grid-template-columns:1fr}.next-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .wrap{width:min(calc(100% - 28px),var(--max))}.topbar .wrap{height:62px}.hero-grid{padding-top:44px}.hero:after,.hero:before{opacity:.55}
+  h1{font-size:56px}.hero-lead{font-size:21px}.metric b{font-size:46px}.section{padding:72px 0}.axis{grid-template-columns:54px 1fr}.axis-n{font-size:45px}.axis-title h3{font-size:24px}
+  .priority-grid,.next-grid{grid-template-columns:1fr}.priority{min-height:240px}.footer .wrap{flex-direction:column;align-items:flex-start}.footer small{text-align:left}
+}
+@media print{
+  .topbar{position:static}.hero{break-after:page}.section{break-inside:avoid}.priority{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Início"><span class="brand-mark">L</span><span>Luísa Cela</span></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#escuta">A escuta</a><a href="#eixos">8 eixos</a><a href="#prioridades">13 prioridades</a><a href="#sintese">Síntese</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Programa participativo · Agosto de 2026</div>
+      <h1>Cuidar.<br>Abrir caminhos.<br>Levar direitos.</h1>
+      <p class="hero-lead">Uma proposta construída para transformar <strong>escuta em compromisso público</strong>, conectando educação, saúde, cultura, trabalho, juventudes e desenvolvimento à vida concreta das pessoas e dos territórios.</p>
+    </div>
+    <aside class="hero-side" aria-label="Números do programa">
+      <div class="metric-stack">
+        <div class="metric"><b>8</b><span>eixos<br>programáticos</span></div>
+        <div class="metric"><b>39</b><span>propostas<br>consolidadas</span></div>
+        <div class="metric"><b>13</b><span>prioridades<br>para comunicar</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+<div class="diagonal"></div>
+
+<section class="section" id="escuta">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Da escuta ao programa</div>
+      <div>
+        <h2 class="section-title">Uma agenda que parte do cotidiano.</h2>
+        <p class="section-intro">O documento reúne contribuições dos encontros participativos e reorganiza ideias recorrentes em compromissos claros. O ponto de convergência é simples: cuidado e oportunidade não são temas separados. São partes de uma mesma política de autonomia, proteção e futuro.</p>
+      </div>
+    </div>
+    <div class="lead-panel">
+      <div><blockquote>“Cuidar das pessoas, abrir oportunidades e levar direitos a todos os territórios.”</blockquote></div>
+      <div><p>O programa combina três movimentos: fortalecer serviços que sustentam a vida cotidiana, criar portas de entrada para renda, formação e cultura, e fazer essas políticas chegarem ao interior, ao campo, às periferias e às comunidades que historicamente recebem menos investimento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="eixos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Os 8 eixos</div>
+      <div>
+        <h2 class="section-title">O programa em oito frentes que se conectam.</h2>
+        <p class="section-intro">Cada eixo responde a um problema concreto, mas a força da proposta está na integração: escola com cultura e proteção, juventude com renda e território, cuidado com valorização profissional, desenvolvimento com justiça climática e participação.</p>
+      </div>
+    </div>
+
+    <div class="axes">
+      <article class="axis">
+        <div class="axis-n">01</div>
+        <div class="axis-title"><h3>Educação, cultura e desenvolvimento integral</h3><p>A escola como infraestrutura de futuro e também como espaço de convivência, proteção, cultura, ciência e pertencimento.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Mais acesso à creche, escola aberta à comunidade, cultura dentro da formação, inclusão digital com pensamento crítico e acessibilidade para que nenhuma criança ou jovem fique à margem.</p><div class="tags"><span class="tag">Creche para Todos</span><span class="tag">Cultura na Escola</span><span class="tag">Inclusão Digital</span><span class="tag">Educação sem Barreiras</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">02</div>
+        <div class="axis-title"><h3>Saúde mental, cuidado e proteção social</h3><p>Cuidar como responsabilidade pública, com prevenção e acolhimento próximos de onde as pessoas vivem e estudam.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Adolescentes e jovens encontram escuta antes que o sofrimento se agrave; famílias e cuidadores deixam de enfrentar tudo sozinhos; cultura e esporte passam a integrar estratégias de proteção e fortalecimento de vínculos.</p><div class="tags"><span class="tag">Eu Posso Te Ouvir</span><span class="tag">Saúde de Quem Educa</span><span class="tag">Rede de Apoio</span><span class="tag">Cultura que Cuida</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">03</div>
+        <div class="axis-title"><h3>Valorização de educadores e profissionais do cuidado</h3><p>Serviço público de qualidade depende de quem está na ponta ter carreira, saúde, formação e condições de trabalho.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Valorizar o profissional deixa de ser uma pauta corporativa e passa a ser parte da qualidade que chega ao estudante e à família: piso, carreira, concursos, formação permanente e acesso à cultura.</p><div class="tags"><span class="tag">Valorização do Magistério</span><span class="tag">Formação Continuada</span><span class="tag">Voucher Cultural</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">04</div>
+        <div class="axis-title"><h3>Juventudes com direitos, renda e futuro</h3><p>Disputar o futuro dos jovens com oportunidade concreta, especialmente nas periferias e entre quem enfrenta mais barreiras.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Mais espaços integrados de cultura, esporte, tecnologia e qualificação; renda vinculada a projetos comunitários; acesso a editais; e uma ponte real entre educação, primeiro emprego e reinserção social.</p><div class="tags"><span class="tag">Centros de Juventude</span><span class="tag">Juventudes Solidárias</span><span class="tag">Primeiro Emprego</span><span class="tag">Fundo da Juventude</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">05</div>
+        <div class="axis-title"><h3>Cultura viva, patrimônio e periferias</h3><p>Cultura como direito, identidade, memória, formação e economia, com recursos chegando a quem produz nos territórios.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Mestres da cultura entram na escola, coletivos periféricos recebem apoio continuado, pontos de cultura ganham articulação territorial e os editais passam a alcançar melhor interior, zonas rurais e comunidades tradicionais.</p><div class="tags"><span class="tag">Patrimônio Vivo</span><span class="tag">Bolsa Cultura Periferias</span><span class="tag">Pontos de Cultura</span><span class="tag">Editais Descentralizados</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">06</div>
+        <div class="axis-title"><h3>Audiovisual, economia criativa e presença regional</h3><p>O audiovisual como setor cultural e produtivo capaz de gerar identidade, emprego, turismo, tecnologia e desenvolvimento regional.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Mais acesso a salas de cinema, presença maior da produção brasileira no streaming, recursos descentralizados, atração de filmagens e melhores condições para produtoras e profissionais fora do eixo tradicional.</p><div class="tags"><span class="tag">Cinema Perto de Você</span><span class="tag">Streaming</span><span class="tag">FSA Regional</span><span class="tag">Film Commissions</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">07</div>
+        <div class="axis-title"><h3>Desenvolvimento territorial, trabalho e justiça climática</h3><p>Gerar renda sem abandonar o território, conectando transição ecológica, interiorização de investimentos e autonomia econômica.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>Mulheres e jovens do campo ganham formação, crédito e canais de comercialização; municípios recebem políticas de maneira mais integrada; comunidades participam das decisões sobre impactos ambientais e grandes empreendimentos.</p><div class="tags"><span class="tag">Agroecologia e Renda</span><span class="tag">Interiorização</span><span class="tag">Justiça Climática</span><span class="tag">Culturas Tradicionais</span></div></div>
+      </article>
+
+      <article class="axis">
+        <div class="axis-n">08</div>
+        <div class="axis-title"><h3>Mandato participativo, financiamento e cooperação</h3><p>Participação como método de governo e de mandato, conectando escuta a orçamento, legislação, fiscalização e pactuação.</p></div>
+        <div class="axis-detail"><b>O que muda na vida real</b><p>O território deixa de ser procurado só em período eleitoral. Assembleias periódicas, canais permanentes de escuta e prestação de contas ajudam a transformar demandas em prioridade política e acompanhamento público.</p><div class="tags"><span class="tag">Assembleias Territoriais</span><span class="tag">Mandato Transversal</span><span class="tag">Regime de Colaboração</span><span class="tag">Editais Simplificados</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section red" id="prioridades">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">13 propostas prioritárias</div>
+      <div>
+        <h2 class="section-title">As portas de entrada para o programa completo.</h2>
+        <p class="section-intro">São propostas selecionadas pela capacidade de conversar com problemas cotidianos, formar imagens claras de solução e expressar com autenticidade os territórios onde Luísa pode construir identificação.</p>
+      </div>
+    </div>
+
+    <div class="priority-grid">
+      <article class="priority"><div class="priority-num"><span>01</span><span>Primeira infância</span></div><h3>Creche para Todos</h3><p>Ampliação da oferta com qualidade e prioridade para áreas mais vulneráveis. Une desenvolvimento infantil, apoio às famílias trabalhadoras e autonomia das mulheres.</p></article>
+      <article class="priority"><div class="priority-num"><span>02</span><span>Educação</span></div><h3>Toda Escola é um Centro de Aprendizagem, Cultura e Cuidado</h3><p>Transforma a escola em ponto de encontro entre ensino, cultura, convivência comunitária e proteção social, aproveitando melhor estruturas e políticas já existentes.</p></article>
+      <article class="priority"><div class="priority-num"><span>03</span><span>Saúde mental</span></div><h3>Programa Eu Posso Te Ouvir</h3><p>Cria uma política intersetorial de escuta, prevenção, encaminhamento e cuidado continuado para adolescentes e jovens dentro da rede pública.</p></article>
+      <article class="priority"><div class="priority-num"><span>04</span><span>Educação</span></div><h3>Saúde de Quem Educa</h3><p>Enfrenta adoecimento e sobrecarga de professores e trabalhadores da educação com prevenção, acolhimento e ambientes de trabalho mais seguros.</p></article>
+      <article class="priority"><div class="priority-num"><span>05</span><span>Trabalho digno</span></div><h3>Valorização do Magistério</h3><p>Defende piso, carreira, concursos, formação e condições adequadas de trabalho como base para uma escola pública que funcione melhor para estudantes e famílias.</p></article>
+      <article class="priority"><div class="priority-num"><span>06</span><span>Inclusão</span></div><h3>Rede de Apoio a Pessoas com Deficiência, Neurodivergentes e Cuidadores</h3><p>Integra saúde, formação, cultura, lazer, autonomia e renda, reconhecendo que o cuidado precisa alcançar tanto a pessoa atendida quanto quem sustenta essa rotina.</p></article>
+      <article class="priority"><div class="priority-num"><span>07</span><span>Juventudes</span></div><h3>Rede Nacional de Centros Integrados de Juventude</h3><p>Leva a mais territórios espaços que reúnem esporte, cultura, arte, tecnologia, qualificação e proteção social, inspirados em experiências cearenses de política juvenil.</p></article>
+      <article class="priority"><div class="priority-num"><span>08</span><span>Renda e território</span></div><h3>Juventudes Solidárias</h3><p>Combina transferência de renda com projetos comunitários concebidos e executados por jovens, fortalecendo protagonismo e vínculo com o território.</p></article>
+      <article class="priority"><div class="priority-num"><span>09</span><span>Oportunidade</span></div><h3>Primeiro Emprego e Educação para Egressos do Socioeducativo</h3><p>Articula qualificação, ensino superior, cotas e incentivos a empresas para que o fim da medida socioeducativa seja também o começo de uma trajetória de oportunidade.</p></article>
+      <article class="priority"><div class="priority-num"><span>10</span><span>Futuro</span></div><h3>Inclusão Digital, Ciência e Futuro nas Escolas</h3><p>Amplia acesso a tecnologias e mídias digitais com formação crítica, segurança e criatividade, conectando escola pública aos desafios do trabalho e da cidadania contemporânea.</p></article>
+      <article class="priority"><div class="priority-num"><span>11</span><span>Cultura</span></div><h3>Cultura na Escola e Palco na Escola</h3><p>Coloca teatro, música, dança, literatura, audiovisual e artes visuais dentro do cotidiano escolar e abre espaço para projetos de estudantes, professores e artistas locais.</p></article>
+      <article class="priority"><div class="priority-num"><span>12</span><span>Interior</span></div><h3>Agroecologia, Trabalho e Renda para Mulheres e Jovens</h3><p>Une assistência, formação, crédito e comercialização para gerar autonomia econômica no campo e transformar sustentabilidade em oportunidade concreta.</p></article>
+      <article class="priority"><div class="priority-num"><span>13</span><span>Participação</span></div><h3>Assembleias Territoriais e Mandato Presente</h3><p>Faz da escuta um método contínuo: encontros nas macrorregiões para definir prioridades, acompanhar ações e prestar contas ao longo do mandato.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sintese">
+  <div class="wrap">
+    <div class="synthesis">
+      <p class="statement">Uma política que <em>cuida</em>, educa, escuta e cria oportunidades.</p>
+      <div class="verb-list">
+        <div class="verb"><b>Cuida</b><span>Quando transforma saúde, creche, proteção e apoio aos cuidadores em responsabilidade pública.</span></div>
+        <div class="verb"><b>Educa</b><span>Quando conecta escola, cultura, ciência, inclusão e valorização dos profissionais.</span></div>
+        <div class="verb"><b>Escuta</b><span>Quando o território participa das decisões e acompanha o que acontece depois da eleição.</span></div>
+        <div class="verb"><b>Abre caminhos</b><span>Quando cria renda, trabalho, formação, acesso à cultura e futuro para quem encontra mais barreiras.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Próximo passo</div>
+      <div><h2 class="section-title">Da proposta política à proposta executável.</h2><p class="section-intro">O próprio documento aponta quatro frentes para transformar a síntese em programa final, peça legislativa e comunicação pública verificável.</p></div>
+    </div>
+    <div class="next-grid">
+      <div class="next"><b>01 · Competência</b><p>Classificar cada proposta por competência legislativa, iniciativa, impacto orçamentário e instrumento de implementação.</p></div>
+      <div class="next"><b>02 · Meta</b><p>Definir indicadores e recortes territoriais, raciais, de gênero, geração, deficiência e renda.</p></div>
+      <div class="next"><b>03 · Instrumento</b><p>Indicar o que exige projeto de lei, emenda, fiscalização, articulação federativa ou incidência política.</p></div>
+      <div class="next"><b>04 · Validação</b><p>Voltar aos grupos da escuta para validar a redação final e gerar versões resumidas para comunicação pública.</p></div>
+    </div>
+    <p class="site-note">Síntese editorial baseada no documento “Programa Participativo · Luísa”, versão consolidada de agosto de 2026.</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><strong>Programa construído com escuta, cuidado e presença nos territórios.</strong><small>Peça de organização visual do conteúdo programático. A redação final das propostas deve manter validação política, técnica e jurídica antes de publicação oficial.</small></div>
+</footer>
+</body>
+</html>
