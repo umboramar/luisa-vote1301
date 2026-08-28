@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="utf-8">
 
   <meta
@@ -8,23 +10,37 @@
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
-  <meta name="theme-color" content="#ef252a">
+  <meta
+    name="theme-color"
+    content="#ef252a"
+  >
 
   <meta
     name="description"
     content="Luisa Cela 1301. Federal é ela."
   >
 
-  <meta name="color-scheme" content="light only">
+  <meta
+    name="color-scheme"
+    content="light only"
+  >
 
   <title>Luisa Cela 1301 | Federal é ela</title>
+
+
+  <!-- =========================
+       ENDEREÇO PRINCIPAL
+       ========================= -->
 
   <link
     rel="canonical"
     href="https://www.luisacela.com.br/"
   >
 
-  <!-- FAVICON -->
+
+  <!-- =========================
+       FAVICON
+       ========================= -->
 
   <link
     rel="icon"
@@ -51,9 +67,14 @@
   >
 
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- =========================
+       COMPARTILHAMENTO
+       ========================= -->
 
-  <meta property="og:type" content="website">
+  <meta
+    property="og:type"
+    content="website"
+  >
 
   <meta
     property="og:title"
@@ -76,7 +97,12 @@
   >
 
 
+
   <style>
+
+    /* =========================
+       GERAL
+       ========================= */
 
     :root {
       color-scheme: light;
@@ -90,14 +116,21 @@
     body {
       margin: 0;
       padding: 0;
+
       min-height: 100%;
+
       background: #ef252a;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       overflow-x: hidden;
     }
+
 
 
     /* =========================
@@ -106,39 +139,51 @@
 
     .page {
       position: relative;
+
       width: 100%;
+
       margin: 0;
     }
 
     .view {
       position: relative;
+
       width: 100%;
+
       margin: 0 auto;
+
       line-height: 0;
+
       overflow: hidden;
     }
 
     .view picture,
-    .view img {
+    .view picture img {
       display: block;
+
       width: 100%;
       height: auto;
+
       margin: 0;
       padding: 0;
 
       user-select: none;
+
       -webkit-user-drag: none;
     }
 
     .desktop-view {
       display: block;
+
       max-width: 1920px;
     }
 
     .mobile-view {
       display: none;
+
       max-width: 767px;
     }
+
 
 
     /* =========================
@@ -156,10 +201,14 @@
       z-index: 50;
 
       width: max-content;
-      max-width: calc(100% - 24px);
+
+      max-width:
+        calc(100% - 24px);
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       gap: 8px;
@@ -171,45 +220,74 @@
 
     .quick-links a {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
 
       min-height: 42px;
 
-      padding: 10px 16px;
+      padding:
+        10px
+        16px;
 
-      background: rgba(255, 255, 255, 0.12);
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.12
+        );
 
-      border: 2px solid rgba(255, 255, 255, 0.95);
+      border:
+        2px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.95
+        );
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      color: #ffffff;
+      color:
+        #ffffff;
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-      font-size: 15.4px;
+      font-size:
+        15.4px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      line-height: 1;
+      line-height:
+        1;
 
-      letter-spacing: 0.01em;
+      letter-spacing:
+        0.01em;
 
-      text-align: center;
+      text-align:
+        center;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      backdrop-filter: blur(1.5px);
+      backdrop-filter:
+        blur(1.5px);
 
-      -webkit-backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter:
+        blur(1.5px);
 
       transition:
         background 0.15s ease,
@@ -217,16 +295,77 @@
     }
 
     .quick-links a:hover {
-      background: rgba(255, 255, 255, 0.22);
 
-      transform: translateY(-1px);
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.22
+        );
+
+      transform:
+        translateY(-1px);
     }
 
     .quick-links a:focus-visible {
-      outline: 2px solid rgba(255, 255, 255, 0.95);
 
-      outline-offset: 2px;
+      outline:
+        2px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.95
+        );
+
+      outline-offset:
+        2px;
     }
+
+
+
+    /* =========================
+       RÉGUA DE LOGOS
+       ========================= */
+
+    .logo-ruler {
+
+      position: absolute;
+
+      z-index: 20;
+
+      display: block;
+
+      height: auto;
+
+      pointer-events: none;
+
+      user-select: none;
+
+      -webkit-user-drag: none;
+
+    }
+
+
+    /* DESKTOP */
+
+    .logo-ruler-desktop {
+
+      left: 5.5%;
+
+      top: 24.8%;
+
+      width: 46%;
+
+      transform:
+        rotate(-9deg);
+
+      transform-origin:
+        left center;
+
+    }
+
 
 
     /* =========================
@@ -234,6 +373,7 @@
        ========================= */
 
     .hotspots {
+
       position: absolute;
 
       inset: 0;
@@ -244,110 +384,187 @@
       pointer-events: none;
 
       overflow: visible;
+
     }
 
     .hotspots a {
+
       pointer-events: all;
 
       cursor: pointer;
 
       outline: none;
 
-      touch-action: manipulation;
+      touch-action:
+        manipulation;
 
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color:
+        transparent;
+
     }
 
     .hotspots .hit {
-      fill: transparent;
 
-      stroke: transparent;
+      fill:
+        transparent;
 
-      pointer-events: all;
+      stroke:
+        transparent;
+
+      pointer-events:
+        all;
+
     }
 
     .hotspots a:hover .hit,
     .hotspots a:focus .hit,
     .hotspots a:focus-visible .hit,
     .hotspots a:active .hit {
-      fill: transparent;
 
-      stroke: transparent;
+      fill:
+        transparent;
 
-      outline: none;
+      stroke:
+        transparent;
+
+      outline:
+        none;
+
     }
+
 
 
     /* =========================
        MOBILE
        ========================= */
 
-    @media (max-width: 767px) {
+    @media
+    (max-width: 767px) {
 
       .desktop-view {
-        display: none;
+
+        display:
+          none;
+
       }
 
       .mobile-view {
-        display: block;
+
+        display:
+          block;
+
       }
 
+
+
+      /* BOTÕES */
+
       .quick-links {
-        top: 10px;
 
-        left: 50%;
-        right: auto;
+        top:
+          10px;
 
-        transform: translateX(-50%);
+        left:
+          50%;
 
-        width: calc(100% - 12px);
+        right:
+          auto;
 
-        max-width: none;
+        transform:
+          translateX(-50%);
 
-        justify-content: center;
+        width:
+          calc(100% - 12px);
 
-        gap: 6px;
+        max-width:
+          none;
+
+        justify-content:
+          center;
+
+        gap:
+          6px;
+
       }
 
       .quick-links a {
-        min-height: 40px;
 
-        padding: 8px 12px;
+        min-height:
+          40px;
 
-        font-size: 13.4px;
+        padding:
+          8px
+          12px;
 
-        border-width: 1.5px;
+        font-size:
+          13.4px;
+
+        border-width:
+          1.5px;
+
+      }
+
+
+
+      /*
+        RÉGUA NO MOBILE
+
+        Mantive escondida por enquanto para não
+        comprometer o layout mobile que já está
+        calibrado separadamente.
+
+        Depois podemos posicioná-la especificamente
+        na versão mobile.
+      */
+
+      .logo-ruler-mobile {
+
+        display:
+          none;
+
       }
 
     }
+
 
 
     /* =========================
        DESKTOP
        ========================= */
 
-    @media (min-width: 768px) {
+    @media
+    (min-width: 768px) {
 
       .desktop-view {
-        display: block;
+
+        display:
+          block;
+
       }
 
       .mobile-view {
-        display: none;
+
+        display:
+          none;
+
       }
 
     }
 
   </style>
+
 </head>
 
 
+
 <body>
+
 
   <main
     class="page"
     aria-label="Site oficial da campanha Luisa Cela 1301"
   >
+
 
 
     <!-- =========================
@@ -359,14 +576,18 @@
       aria-label="Links rápidos da campanha"
     >
 
+
       <a
         href="https://flic.kr/ps/486qym"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fotos com Luisa Cela"
       >
+
         FOTOS COM ELA
+
       </a>
+
 
 
       <a
@@ -375,8 +596,11 @@
         rel="noopener noreferrer"
         aria-label="Quero material de campanha"
       >
+
         QUERO MATERIAL
+
       </a>
+
 
 
       <a
@@ -385,10 +609,14 @@
         rel="noopener noreferrer"
         aria-label="Acessar Twibbonize da campanha"
       >
+
         TWIBBONIZE
+
       </a>
 
+
     </nav>
+
 
 
 
@@ -397,128 +625,306 @@
          ========================= -->
 
     <section
+
       class="view desktop-view"
+
       aria-label="Versão desktop do site Luisa Cela 1301"
+
     >
+
 
       <picture>
 
+
         <source
+
           type="image/webp"
+
           srcset="
             assets/desktop-v2-1280.webp 1280w,
             assets/desktop-v2-1920.webp 1920w
           "
+
           sizes="
             (min-width: 1920px) 1920px,
             100vw
           "
+
         >
 
+
         <img
-          src="assets/desktop-v2-1920.jpg"
+
+          src="
+            assets/desktop-v2-1920.jpg
+          "
+
           width="1920"
+
           height="3745"
-          alt="Luisa Cela 1301. Federal é ela. Informações da campanha, trajetória, propostas e formas de participar."
+
+          alt="
+            Luisa Cela 1301.
+            Federal é ela.
+            Informações da campanha,
+            trajetória,
+            propostas
+            e formas de participar.
+          "
+
           fetchpriority="high"
+
           decoding="async"
+
         >
+
 
       </picture>
 
 
-      <svg
-        class="hotspots"
-        viewBox="0 0 1920 3745"
-        preserveAspectRatio="none"
-        aria-label="Links da campanha na versão desktop"
+
+      <!-- =========================
+           RÉGUA DE LOGOS
+           ========================= -->
+
+      <img
+
+        class="
+          logo-ruler
+          logo-ruler-desktop
+        "
+
+        src="
+          assets/regua-logos.png?v=20260828
+        "
+
+        alt=""
+
+        aria-hidden="true"
+
       >
+
+
+
+
+      <!-- =========================
+           LINKS INVISÍVEIS DESKTOP
+           ========================= -->
+
+      <svg
+
+        class="hotspots"
+
+        viewBox="
+          0
+          0
+          1920
+          3745
+        "
+
+        preserveAspectRatio="
+          none
+        "
+
+        aria-label="
+          Links da campanha
+          na versão desktop
+        "
+
+      >
+
 
 
         <!-- WHATSAPP -->
 
         <a
-          href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
+
+          href="
+            https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Faça parte do nosso grupo no WhatsApp"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Faça parte
+            do nosso grupo
+            no WhatsApp
+          "
+
         >
 
+
           <polygon
+
             class="hit"
-            points="1281,809 1030,862 1030,977 1281,924"
+
+            points="
+              1281,809
+              1030,862
+              1030,977
+              1281,924
+            "
+
           ></polygon>
 
+
         </a>
+
 
 
 
         <!-- APOIE -->
 
         <a
-          href="https://queroapoiar.com.br/luisacela"
+
+          href="
+            https://queroapoiar.com.br/luisacela
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Apoie nossa campanha"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Apoie nossa campanha
+          "
+
         >
 
+
           <polygon
+
             class="hit"
-            points="1591,751 1340,804 1340,919 1591,866"
+
+            points="
+              1591,751
+              1340,804
+              1340,919
+              1591,866
+            "
+
           ></polygon>
 
+
         </a>
+
 
 
 
         <!-- MATERIAL -->
 
         <a
-          href="https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8"
+
+          href="
+            https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Baixe nosso material de campanha"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Baixe nosso
+            material de campanha
+          "
+
         >
 
+
           <polygon
+
             class="hit"
-            points="1871,698 1620,751 1620,866 1871,813"
+
+            points="
+              1871,698
+              1620,751
+              1620,866
+              1871,813
+            "
+
           ></polygon>
 
+
         </a>
+
 
 
 
         <!-- YOUTUBE -->
 
         <a
-          href="https://www.youtube.com/@luisacelaoficial"
+
+          href="
+            https://www.youtube.com/@luisacelaoficial
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Acesse nosso canal no YouTube"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Acesse nosso canal
+            no YouTube
+          "
+
         >
 
-          <rect
-            class="hit"
-            x="1048"
-            y="1029"
-            width="569"
-            height="329"
-          ></rect>
 
           <rect
+
             class="hit"
-            x="1647"
-            y="1215"
-            width="181"
-            height="190"
+
+            x="1048"
+
+            y="1029"
+
+            width="569"
+
+            height="329"
+
           ></rect>
+
+
+
+          <rect
+
+            class="hit"
+
+            x="1647"
+
+            y="1215"
+
+            width="181"
+
+            height="190"
+
+          ></rect>
+
 
         </a>
 
+
       </svg>
 
+
     </section>
+
+
+
 
 
 
@@ -527,129 +933,298 @@
          ========================= -->
 
     <section
+
       class="view mobile-view"
-      aria-label="Versão mobile do site Luisa Cela 1301"
+
+      aria-label="
+        Versão mobile
+        do site Luisa Cela 1301
+      "
+
     >
+
 
       <picture>
 
+
         <source
+
           type="image/webp"
+
           srcset="
             assets/mobile-v2-380.webp 380w,
             assets/mobile-v2-760.webp 760w
           "
-          sizes="100vw"
+
+          sizes="
+            100vw
+          "
+
         >
 
+
         <img
-          src="assets/mobile-v2-760.jpg"
+
+          src="
+            assets/mobile-v2-760.jpg
+          "
+
           width="760"
+
           height="11065"
-          alt="Luisa Cela 1301. Versão para celular conforme o layout mobile criado no Illustrator."
+
+          alt="
+            Luisa Cela 1301.
+            Versão para celular.
+          "
+
           fetchpriority="high"
+
           decoding="async"
+
         >
+
 
       </picture>
 
 
-      <svg
-        class="hotspots"
-        viewBox="0 0 380 5533"
-        preserveAspectRatio="none"
-        aria-label="Links da campanha na versão mobile"
+
+
+      <!--
+        RÉGUA MOBILE
+
+        A imagem já está preparada no HTML,
+        mas permanece escondida até calibrarmos
+        a posição específica no mobile.
+      -->
+
+      <img
+
+        class="
+          logo-ruler
+          logo-ruler-mobile
+        "
+
+        src="
+          assets/regua-logos.png?v=20260828
+        "
+
+        alt=""
+
+        aria-hidden="true"
+
       >
+
+
+
+
+      <!-- =========================
+           LINKS MOBILE
+           ========================= -->
+
+      <svg
+
+        class="hotspots"
+
+        viewBox="
+          0
+          0
+          380
+          5533
+        "
+
+        preserveAspectRatio="
+          none
+        "
+
+        aria-label="
+          Links da campanha
+          na versão mobile
+        "
+
+      >
+
 
 
         <!-- WHATSAPP -->
 
         <a
-          href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
+
+          href="
+            https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Faça parte do nosso grupo no WhatsApp"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Faça parte
+            do nosso grupo
+            no WhatsApp
+          "
+
         >
 
+
           <rect
+
             class="hit"
+
             x="82"
+
             y="320"
+
             width="225"
+
             height="145"
+
           ></rect>
 
+
         </a>
+
 
 
 
         <!-- APOIE -->
 
         <a
-          href="https://queroapoiar.com.br/luisacela"
+
+          href="
+            https://queroapoiar.com.br/luisacela
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Apoie nossa campanha"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Apoie nossa campanha
+          "
+
         >
 
+
           <rect
+
             class="hit"
+
             x="82"
+
             y="458"
+
             width="225"
+
             height="142"
+
           ></rect>
 
+
         </a>
+
 
 
 
         <!-- MATERIAL -->
 
         <a
-          href="https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8"
+
+          href="
+            https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Baixe nosso material de campanha"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Baixe nosso
+            material de campanha
+          "
+
         >
 
+
           <rect
+
             class="hit"
+
             x="82"
+
             y="590"
+
             width="225"
+
             height="160"
+
           ></rect>
 
+
         </a>
+
 
 
 
         <!-- YOUTUBE -->
 
         <a
-          href="https://www.youtube.com/@luisacelaoficial"
+
+          href="
+            https://www.youtube.com/@luisacelaoficial
+          "
+
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Acesse nosso canal no YouTube"
+
+          rel="
+            noopener
+            noreferrer
+          "
+
+          aria-label="
+            Acesse nosso canal
+            no YouTube
+          "
+
         >
 
+
           <rect
+
             class="hit"
+
             x="20"
+
             y="790"
+
             width="345"
+
             height="170"
+
           ></rect>
+
 
         </a>
 
+
       </svg>
+
 
     </section>
 
 
   </main>
 
+
 </body>
+
 </html>
