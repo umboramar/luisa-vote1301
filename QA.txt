@@ -1,8 +1,0 @@
-QA realizado:
-- HTML parseado sem referências locais ausentes.
-- 4 links no desktop e os mesmos 4 links no mobile.
-- Desktop baseado no artboard 1920 x 3745 mais recente.
-- Mobile baseado no artboard 380 x 5533 mais recente.
-- Assets mobile 1x e 2x incluídos.
-- Breakpoint em 767px.
-- CNAME preservado para www.luisacela.com.br.
