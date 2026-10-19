@@ -1,697 +1,86 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ef252a">
-
-  <meta
-    name="description"
-    content="Luisa Cela. Vencemos, mas a luta continua para reeleger Lula presidente."
-  >
-
+  <meta name="description" content="Luisa Cela. Vencemos, mas a luta continua para reeleger Lula presidente.">
   <meta name="color-scheme" content="light only">
-
   <title>Luisa Cela | A luta continua</title>
-
-  <link
-    rel="canonical"
-    href="https://www.luisacela.com.br/"
-  >
-
-
-  <!-- FAVICON - MANTER -->
-
-  <link
-    rel="icon"
-    href="/favicon.ico?v=20261019"
-    type="image/x-icon"
-    sizes="any"
-  >
-
-  <link
-    rel="shortcut icon"
-    href="/favicon.ico?v=20261019"
-    type="image/x-icon"
-  >
-
-  <link
-    rel="icon"
-    href="/favicon.png?v=20261019"
-    type="image/png"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="/favicon.png?v=20261019"
-  >
-
-
+  <link rel="canonical" href="https://www.luisacela.com.br/">
+  <link rel="icon" href="/favicon.ico?v=20261019" type="image/x-icon" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico?v=20261019" type="image/x-icon">
+  <link rel="icon" href="/favicon.png?v=20261019" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png?v=20261019">
   <style>
-
-    :root {
-      color-scheme: light;
-      --vermelho: #ef252a;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-
-      width: 100%;
-      min-height: 100%;
-
-      background: var(--vermelho);
-    }
-
-    body {
-      overflow-x: hidden;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-    }
-
-
-    /* =========================
-       SITE
-       ========================= */
-
-    .site {
-      width: 100%;
-      margin: 0 auto;
-
-      background: var(--vermelho);
-    }
-
-
-    .layout {
-      position: relative;
-
-      width: 100%;
-      margin: 0 auto;
-
-      line-height: 0;
-
-      overflow: hidden;
-    }
-
-
-    /* Desktop */
-
-    .desktop-layout {
-      display: block;
-
-      max-width: 1920px;
-    }
-
-
-    /* Mobile */
-
-    .mobile-layout {
-      display: none;
-
-      max-width: 760px;
-    }
-
-
-
-    /* =========================
-       PDF CANVAS
-       ========================= */
-
-    .pdf-canvas {
-      display: block;
-
-      width: 100%;
-      height: auto;
-
-      margin: 0;
-      padding: 0;
-
-      background: var(--vermelho);
-    }
-
-
-
-    /* =========================
-       ÁREAS CLICÁVEIS
-       ========================= */
-
-    .hotspot {
-      position: absolute;
-
-      z-index: 20;
-
-      display: block;
-
-      cursor: pointer;
-
-      background: transparent;
-
-      text-decoration: none;
-
-      -webkit-tap-highlight-color: transparent;
-
-      touch-action: manipulation;
-
-      border-radius: 8px;
-    }
-
-
-    /*
-      Apenas para acessibilidade.
-      Não muda visual do layout.
-    */
-
-    .hotspot:focus-visible {
-      outline: 3px solid #ffffff;
-      outline-offset: 4px;
-    }
-
-
-
-    /* ==========================================================
-       DESKTOP
-       Página 1 do PDF
-       ========================================================== */
-
-
-    /* 01 - WHATSAPP */
-
-    .desktop-whatsapp {
-
-      left: 57.0%;
-      top: 19.0%;
-
-      width: 31.5%;
-      height: 11.8%;
-
-    }
-
-
-    /* 02 - VÍDEO A LUTA CONTINUA */
-
-    .desktop-video {
-
-      left: 53.5%;
-      top: 31.0%;
-
-      width: 33.0%;
-      height: 14.0%;
-
-    }
-
-
-    /* 03 - APOIAR CAMPANHA DO LULA */
-
-    .desktop-apoio {
-
-      left: 27.5%;
-      top: 66.0%;
-
-      width: 45.0%;
-      height: 15.0%;
-
-    }
-
-
-
-    /* ==========================================================
-       MOBILE
-       Página 2 do PDF
-       ========================================================== */
-
-
-    /* 01 - WHATSAPP */
-
-    .mobile-whatsapp {
-
-      left: 16%;
-      top: 8%;
-
-      width: 70%;
-      height: 10%;
-
-    }
-
-
-    /* 02 - VÍDEO A LUTA CONTINUA */
-
-    .mobile-video {
-
-      left: 16%;
-      top: 18%;
-
-      width: 70%;
-      height: 9%;
-
-    }
-
-
-    /* 03 - APOIAR CAMPANHA DO LULA */
-
-    .mobile-apoio {
-
-      left: 14%;
-      top: 78%;
-
-      width: 72%;
-      height: 10%;
-
-    }
-
-
-
-    /* =========================
-       BREAKPOINT
-       ========================= */
-
-    @media (max-width: 767px) {
-
-      .desktop-layout {
-        display: none;
-      }
-
-      .mobile-layout {
-        display: block;
-      }
-
-    }
-
-
-    @media (min-width: 768px) {
-
-      .desktop-layout {
-        display: block;
-      }
-
-      .mobile-layout {
-        display: none;
-      }
-
-    }
-
-
+    :root { color-scheme: light; --red:#ef252a; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; width:100%; min-height:100%; background:var(--red); }
+    body { overflow-x:hidden; font-family:Arial, Helvetica, sans-serif; }
+    .site { width:100%; margin:0; background:var(--red); }
+    .view { position:relative; width:100%; margin:0 auto; line-height:0; overflow:hidden; }
+    .view picture, .view img { display:block; width:100%; height:auto; margin:0; padding:0; user-select:none; -webkit-user-drag:none; }
+    .desktop-view { display:block; max-width:1920px; }
+    .mobile-view { display:none; max-width:760px; }
+    .hotspots { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+    .hotspots a { pointer-events:all; cursor:pointer; outline:none; touch-action:manipulation; -webkit-tap-highlight-color:transparent; }
+    .hotspots .hit { fill:transparent; stroke:transparent; pointer-events:all; }
+    .hotspots a:focus-visible .hit { stroke:#fff; stroke-width:8; fill:transparent; }
+    @media (max-width:767px){ .desktop-view{display:none}.mobile-view{display:block} }
+    @media (min-width:768px){ .desktop-view{display:block}.mobile-view{display:none} }
   </style>
-
 </head>
-
-
 <body>
+  <main class="site" aria-label="Site oficial de Luisa Cela">
 
-  <main
-    class="site"
-    aria-label="Site oficial de Luisa Cela"
-  >
+    <section class="view desktop-view" aria-label="Versão desktop do site">
+      <picture>
+        <source type="image/webp" srcset="assets/desktop-r03-1280.webp 1280w, assets/desktop-r03-1920.webp 1920w" sizes="(min-width:1920px) 1920px, 100vw">
+        <img src="assets/desktop-r03-3840.jpg" width="3840" height="6300" alt="Luisa Cela e Lula. Vencemos, mas a luta continua para reeleger Lula presidente." fetchpriority="high" decoding="async">
+      </picture>
 
+      <svg class="hotspots" viewBox="0 0 3840 6300" preserveAspectRatio="none" aria-label="Links da campanha na versão desktop">
+        <!-- 1. GRUPO DO WHATSAPP -->
+        <a href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t" target="_blank" rel="noopener noreferrer" aria-label="Faça parte do nosso grupo no WhatsApp">
+          <rect class="hit" x="2220" y="1170" width="1320" height="820" rx="40"></rect>
+        </a>
 
-    <!-- ========================================================
-         DESKTOP
-         PDF PÁGINA 1
-         ======================================================== -->
+        <!-- 2. VÍDEO A LUTA CONTINUA -->
+        <a href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view" target="_blank" rel="noopener noreferrer" aria-label="Assista ao vídeo A luta continua">
+          <rect class="hit" x="2070" y="2010" width="1320" height="800" rx="40"></rect>
+        </a>
 
-    <section
-      class="layout desktop-layout"
-      id="desktopLayout"
-      aria-label="Versão desktop do site"
-    >
-
-      <canvas
-        id="desktopCanvas"
-        class="pdf-canvas"
-        aria-label="Layout desktop Luisa Cela"
-      ></canvas>
-
-
-      <!-- 01 WHATSAPP -->
-
-      <a
-        class="hotspot desktop-whatsapp"
-        href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Faça parte do nosso grupo no WhatsApp"
-      ></a>
-
-
-      <!-- 02 A LUTA CONTINUA -->
-
-      <a
-        class="hotspot desktop-video"
-        href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Assista ao vídeo A luta continua"
-      ></a>
-
-
-      <!-- 03 QUERO APOIAR A CAMPANHA DO LULA -->
-
-      <a
-        class="hotspot desktop-apoio"
-        href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Quero apoiar a campanha do Lula"
-      ></a>
-
+        <!-- 3. QUERO APOIAR A CAMPANHA DO LULA -->
+        <a href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true" target="_blank" rel="noopener noreferrer" aria-label="Quero apoiar a campanha do Lula">
+          <rect class="hit" x="1030" y="4240" width="1830" height="930" rx="40"></rect>
+        </a>
+      </svg>
     </section>
 
+    <section class="view mobile-view" aria-label="Versão mobile do site">
+      <picture>
+        <source type="image/webp" srcset="assets/mobile-r03-380.webp 380w, assets/mobile-r03-760.jpg 760w" sizes="100vw">
+        <img src="assets/mobile-r03-760.jpg" width="760" height="6680" alt="Luisa Cela e Lula. Vencemos, mas a luta continua para reeleger Lula presidente." fetchpriority="high" decoding="async">
+      </picture>
 
+      <svg class="hotspots" viewBox="0 0 760 6680" preserveAspectRatio="none" aria-label="Links da campanha na versão mobile">
+        <!-- 1. GRUPO DO WHATSAPP -->
+        <a href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t" target="_blank" rel="noopener noreferrer" aria-label="Faça parte do nosso grupo no WhatsApp">
+          <rect class="hit" x="85" y="760" width="590" height="620" rx="24"></rect>
+        </a>
 
-    <!-- ========================================================
-         MOBILE
-         PDF PÁGINA 2
-         ======================================================== -->
+        <!-- 2. VÍDEO A LUTA CONTINUA: no layout mobile, o clique fica sobre o título A LUTA CONTINUA -->
+        <a href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view" target="_blank" rel="noopener noreferrer" aria-label="Assista ao vídeo A luta continua">
+          <rect class="hit" x="78" y="1390" width="560" height="610" rx="24"></rect>
+        </a>
 
-    <section
-      class="layout mobile-layout"
-      id="mobileLayout"
-      aria-label="Versão mobile do site"
-    >
-
-      <canvas
-        id="mobileCanvas"
-        class="pdf-canvas"
-        aria-label="Layout mobile Luisa Cela"
-      ></canvas>
-
-
-      <!-- 01 WHATSAPP -->
-
-      <a
-        class="hotspot mobile-whatsapp"
-        href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Faça parte do nosso grupo no WhatsApp"
-      ></a>
-
-
-      <!-- 02 A LUTA CONTINUA -->
-
-      <a
-        class="hotspot mobile-video"
-        href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Assista ao vídeo A luta continua"
-      ></a>
-
-
-      <!-- 03 QUERO APOIAR A CAMPANHA DO LULA -->
-
-      <a
-        class="hotspot mobile-apoio"
-        href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Quero apoiar a campanha do Lula"
-      ></a>
-
+        <!-- 3. QUERO APOIAR A CAMPANHA DO LULA -->
+        <a href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true" target="_blank" rel="noopener noreferrer" aria-label="Quero apoiar a campanha do Lula">
+          <rect class="hit" x="70" y="5200" width="610" height="520" rx="24"></rect>
+        </a>
+      </svg>
     </section>
-
 
   </main>
-
-
-
-  <!-- ==========================================================
-       PDF.JS
-
-       Renderiza:
-       página 1 = desktop
-       página 2 = mobile
-       ========================================================== -->
-
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs"
-    type="module"
-  ></script>
-
-
-  <script type="module">
-
-    import * as pdfjsLib
-      from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs";
-
-
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.worker.min.mjs";
-
-
-    const PDF_URL =
-      "./assets/site-luisa-r03.pdf";
-
-
-    let pdfDocument = null;
-
-
-    async function loadPDF() {
-
-      pdfDocument =
-        await pdfjsLib
-          .getDocument(PDF_URL)
-          .promise;
-
-      await renderDesktop();
-
-      await renderMobile();
-
-    }
-
-
-
-    async function renderPage(
-      pageNumber,
-      canvas,
-      container
-    ) {
-
-      if (!pdfDocument) return;
-
-
-      const page =
-        await pdfDocument
-          .getPage(pageNumber);
-
-
-      /*
-        viewport inicial para descobrir
-        proporção real da página
-      */
-
-      const baseViewport =
-        page.getViewport({
-          scale: 1
-        });
-
-
-      const cssWidth =
-        container.clientWidth;
-
-
-      /*
-        Usa pixel ratio para manter
-        a arte nítida em Retina/iPhone.
-      */
-
-      const pixelRatio =
-        Math.min(
-          window.devicePixelRatio || 1,
-          2
-        );
-
-
-      const scale =
-        (
-          cssWidth /
-          baseViewport.width
-        ) *
-        pixelRatio;
-
-
-      const viewport =
-        page.getViewport({
-          scale
-        });
-
-
-      canvas.width =
-        Math.floor(
-          viewport.width
-        );
-
-
-      canvas.height =
-        Math.floor(
-          viewport.height
-        );
-
-
-      /*
-        CSS mantém tamanho correto
-        independentemente da resolução.
-      */
-
-      canvas.style.width =
-        cssWidth + "px";
-
-
-      canvas.style.height =
-        (
-          viewport.height /
-          pixelRatio
-        ) + "px";
-
-
-      const context =
-        canvas.getContext(
-          "2d",
-          {
-            alpha: false
-          }
-        );
-
-
-      await page.render({
-
-        canvasContext:
-          context,
-
-        viewport:
-          viewport
-
-      }).promise;
-
-    }
-
-
-
-    async function renderDesktop() {
-
-      const canvas =
-        document.getElementById(
-          "desktopCanvas"
-        );
-
-
-      const container =
-        document.getElementById(
-          "desktopLayout"
-        );
-
-
-      await renderPage(
-        1,
-        canvas,
-        container
-      );
-
-    }
-
-
-
-    async function renderMobile() {
-
-      const canvas =
-        document.getElementById(
-          "mobileCanvas"
-        );
-
-
-      const container =
-        document.getElementById(
-          "mobileLayout"
-        );
-
-
-      await renderPage(
-        2,
-        canvas,
-        container
-      );
-
-    }
-
-
-
-    /*
-      Recalibra automaticamente
-      quando muda largura/orientação.
-    */
-
-    let resizeTimer;
-
-
-    window.addEventListener(
-      "resize",
-      () => {
-
-        clearTimeout(
-          resizeTimer
-        );
-
-
-        resizeTimer =
-          setTimeout(
-            async () => {
-
-              if (
-                window.innerWidth
-                >= 768
-              ) {
-
-                await renderDesktop();
-
-              }
-
-              else {
-
-                await renderMobile();
-
-              }
-
-            },
-            180
-          );
-
-      }
-    );
-
-
-
-    /*
-      Inicialização
-    */
-
-    loadPDF().catch(
-      error => {
-
-        console.error(
-          "Erro ao carregar o layout:",
-          error
-        );
-
-      }
-    );
-
-  </script>
-
-
 </body>
-
 </html>
