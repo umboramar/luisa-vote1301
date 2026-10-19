@@ -1,23 +1,60 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
   <meta name="theme-color" content="#ef252a">
-  <meta name="description" content="Luisa Cela. Vencemos, mas a luta continua para reeleger Lula presidente.">
+
+  <meta
+    name="description"
+    content="Luisa Cela. Vencemos, mas a luta continua para reeleger Lula presidente."
+  >
+
   <meta name="color-scheme" content="light only">
 
   <title>Luisa Cela | A luta continua</title>
 
-  <link rel="canonical" href="https://www.luisacela.com.br/">
+  <link
+    rel="canonical"
+    href="https://www.luisacela.com.br/"
+  >
 
-  <!-- FAVICON - PRESERVADO -->
-  <link rel="icon" href="/favicon.ico?v=20261019" type="image/x-icon" sizes="any">
-  <link rel="shortcut icon" href="/favicon.ico?v=20261019" type="image/x-icon">
-  <link rel="icon" href="/favicon.png?v=20261019" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png?v=20261019">
+
+  <!-- FAVICON - MANTER -->
+
+  <link
+    rel="icon"
+    href="/favicon.ico?v=20261019"
+    type="image/x-icon"
+    sizes="any"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="/favicon.ico?v=20261019"
+    type="image/x-icon"
+  >
+
+  <link
+    rel="icon"
+    href="/favicon.png?v=20261019"
+    type="image/png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/favicon.png?v=20261019"
+  >
+
 
   <style>
+
     :root {
       color-scheme: light;
       --vermelho: #ef252a;
@@ -31,123 +68,219 @@
     body {
       margin: 0;
       padding: 0;
+
       width: 100%;
       min-height: 100%;
+
       background: var(--vermelho);
     }
 
     body {
       overflow-x: hidden;
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
     }
+
+
+    /* =========================
+       SITE
+       ========================= */
 
     .site {
       width: 100%;
       margin: 0 auto;
+
       background: var(--vermelho);
     }
+
 
     .layout {
       position: relative;
+
       width: 100%;
       margin: 0 auto;
+
       line-height: 0;
+
       overflow: hidden;
-      background: var(--vermelho);
     }
+
+
+    /* Desktop */
 
     .desktop-layout {
       display: block;
+
       max-width: 1920px;
     }
 
+
+    /* Mobile */
+
     .mobile-layout {
       display: none;
+
       max-width: 760px;
     }
 
-    .pdf-canvas,
-    .fallback-image {
+
+
+    /* =========================
+       PDF CANVAS
+       ========================= */
+
+    .pdf-canvas {
       display: block;
+
       width: 100%;
       height: auto;
+
       margin: 0;
       padding: 0;
+
       background: var(--vermelho);
     }
 
-    .fallback-image {
-      display: none;
-    }
+
+
+    /* =========================
+       ÁREAS CLICÁVEIS
+       ========================= */
 
     .hotspot {
       position: absolute;
+
       z-index: 20;
-      display: none;
+
+      display: block;
+
       cursor: pointer;
+
       background: transparent;
+
       text-decoration: none;
+
       -webkit-tap-highlight-color: transparent;
+
       touch-action: manipulation;
+
       border-radius: 8px;
     }
 
-    .pdf-ready .hotspot {
-      display: block;
-    }
+
+    /*
+      Apenas para acessibilidade.
+      Não muda visual do layout.
+    */
 
     .hotspot:focus-visible {
       outline: 3px solid #ffffff;
       outline-offset: 4px;
     }
 
-    /* DESKTOP - PÁGINA 1 */
+
+
+    /* ==========================================================
+       DESKTOP
+       Página 1 do PDF
+       ========================================================== */
+
+
+    /* 01 - WHATSAPP */
 
     .desktop-whatsapp {
-      left: 56.0%;
-      top: 18.0%;
-      width: 32.5%;
-      height: 12.5%;
+
+      left: 57.0%;
+      top: 19.0%;
+
+      width: 31.5%;
+      height: 11.8%;
+
     }
+
+
+    /* 02 - VÍDEO A LUTA CONTINUA */
 
     .desktop-video {
-      left: 53.0%;
+
+      left: 53.5%;
       top: 31.0%;
-      width: 32.5%;
-      height: 14.5%;
+
+      width: 33.0%;
+      height: 14.0%;
+
     }
+
+
+    /* 03 - APOIAR CAMPANHA DO LULA */
 
     .desktop-apoio {
-      left: 26.0%;
+
+      left: 27.5%;
       top: 66.0%;
-      width: 48.0%;
+
+      width: 45.0%;
       height: 15.0%;
+
     }
 
-    /* MOBILE - PÁGINA 2 */
+
+
+    /* ==========================================================
+       MOBILE
+       Página 2 do PDF
+       ========================================================== */
+
+
+    /* 01 - WHATSAPP */
 
     .mobile-whatsapp {
-      left: 15.0%;
-      top: 8.0%;
-      width: 72.0%;
-      height: 11.0%;
+
+      left: 16%;
+      top: 8%;
+
+      width: 70%;
+      height: 10%;
+
     }
+
+
+    /* 02 - VÍDEO A LUTA CONTINUA */
 
     .mobile-video {
-      left: 15.0%;
-      top: 18.5%;
-      width: 72.0%;
-      height: 10.0%;
+
+      left: 16%;
+      top: 18%;
+
+      width: 70%;
+      height: 9%;
+
     }
+
+
+    /* 03 - APOIAR CAMPANHA DO LULA */
 
     .mobile-apoio {
-      left: 13.0%;
-      top: 77.0%;
-      width: 74.0%;
-      height: 11.0%;
+
+      left: 14%;
+      top: 78%;
+
+      width: 72%;
+      height: 10%;
+
     }
+
+
+
+    /* =========================
+       BREAKPOINT
+       ========================= */
 
     @media (max-width: 767px) {
+
       .desktop-layout {
         display: none;
       }
@@ -155,9 +288,12 @@
       .mobile-layout {
         display: block;
       }
+
     }
+
 
     @media (min-width: 768px) {
+
       .desktop-layout {
         display: block;
       }
@@ -165,31 +301,42 @@
       .mobile-layout {
         display: none;
       }
+
     }
+
+
   </style>
+
 </head>
 
-<body>
-  <main class="site" aria-label="Site oficial de Luisa Cela">
 
-    <!-- DESKTOP - PÁGINA 1 DO PDF -->
+<body>
+
+  <main
+    class="site"
+    aria-label="Site oficial de Luisa Cela"
+  >
+
+
+    <!-- ========================================================
+         DESKTOP
+         PDF PÁGINA 1
+         ======================================================== -->
+
     <section
       class="layout desktop-layout"
       id="desktopLayout"
       aria-label="Versão desktop do site"
     >
+
       <canvas
         id="desktopCanvas"
         class="pdf-canvas"
         aria-label="Layout desktop Luisa Cela"
       ></canvas>
 
-      <img
-        id="desktopFallback"
-        class="fallback-image"
-        src="assets/desktop-v3-1920.jpg"
-        alt=""
-      >
+
+      <!-- 01 WHATSAPP -->
 
       <a
         class="hotspot desktop-whatsapp"
@@ -199,6 +346,9 @@
         aria-label="Faça parte do nosso grupo no WhatsApp"
       ></a>
 
+
+      <!-- 02 A LUTA CONTINUA -->
+
       <a
         class="hotspot desktop-video"
         href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
@@ -207,6 +357,9 @@
         aria-label="Assista ao vídeo A luta continua"
       ></a>
 
+
+      <!-- 03 QUERO APOIAR A CAMPANHA DO LULA -->
+
       <a
         class="hotspot desktop-apoio"
         href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
@@ -214,26 +367,30 @@
         rel="noopener noreferrer"
         aria-label="Quero apoiar a campanha do Lula"
       ></a>
+
     </section>
 
-    <!-- MOBILE - PÁGINA 2 DO PDF -->
+
+
+    <!-- ========================================================
+         MOBILE
+         PDF PÁGINA 2
+         ======================================================== -->
+
     <section
       class="layout mobile-layout"
       id="mobileLayout"
       aria-label="Versão mobile do site"
     >
+
       <canvas
         id="mobileCanvas"
         class="pdf-canvas"
         aria-label="Layout mobile Luisa Cela"
       ></canvas>
 
-      <img
-        id="mobileFallback"
-        class="fallback-image"
-        src="assets/mobile-v3-760.jpg"
-        alt=""
-      >
+
+      <!-- 01 WHATSAPP -->
 
       <a
         class="hotspot mobile-whatsapp"
@@ -243,6 +400,9 @@
         aria-label="Faça parte do nosso grupo no WhatsApp"
       ></a>
 
+
+      <!-- 02 A LUTA CONTINUA -->
+
       <a
         class="hotspot mobile-video"
         href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
@@ -251,6 +411,9 @@
         aria-label="Assista ao vídeo A luta continua"
       ></a>
 
+
+      <!-- 03 QUERO APOIAR A CAMPANHA DO LULA -->
+
       <a
         class="hotspot mobile-apoio"
         href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
@@ -258,108 +421,277 @@
         rel="noopener noreferrer"
         aria-label="Quero apoiar a campanha do Lula"
       ></a>
+
     </section>
+
 
   </main>
 
+
+
+  <!-- ==========================================================
+       PDF.JS
+
+       Renderiza:
+       página 1 = desktop
+       página 2 = mobile
+       ========================================================== -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs"
+    type="module"
+  ></script>
+
+
   <script type="module">
+
     import * as pdfjsLib
-      from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.min.mjs";
+      from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs";
+
 
     pdfjsLib.GlobalWorkerOptions.workerSrc =
-      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs";
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.worker.min.mjs";
 
-    const PDF_URL = "./assets/site-luisa-r03.pdf";
+
+    const PDF_URL =
+      "./assets/site-luisa-r03.pdf";
+
+
     let pdfDocument = null;
 
-    async function renderPage(pageNumber, canvas, container) {
-      const page = await pdfDocument.getPage(pageNumber);
-
-      const baseViewport = page.getViewport({ scale: 1 });
-      const cssWidth = container.clientWidth;
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-
-      const scale = (cssWidth / baseViewport.width) * pixelRatio;
-      const viewport = page.getViewport({ scale });
-
-      canvas.width = Math.floor(viewport.width);
-      canvas.height = Math.floor(viewport.height);
-
-      canvas.style.width = cssWidth + "px";
-      canvas.style.height = (viewport.height / pixelRatio) + "px";
-
-      const context = canvas.getContext("2d", { alpha: false });
-
-      await page.render({
-        canvasContext: context,
-        viewport
-      }).promise;
-
-      container.classList.add("pdf-ready");
-    }
-
-    async function renderDesktop() {
-      await renderPage(
-        1,
-        document.getElementById("desktopCanvas"),
-        document.getElementById("desktopLayout")
-      );
-    }
-
-    async function renderMobile() {
-      await renderPage(
-        2,
-        document.getElementById("mobileCanvas"),
-        document.getElementById("mobileLayout")
-      );
-    }
-
-    function showFallback() {
-      const desktopCanvas = document.getElementById("desktopCanvas");
-      const mobileCanvas = document.getElementById("mobileCanvas");
-      const desktopFallback = document.getElementById("desktopFallback");
-      const mobileFallback = document.getElementById("mobileFallback");
-
-      desktopCanvas.style.display = "none";
-      mobileCanvas.style.display = "none";
-
-      desktopFallback.style.display = "block";
-      mobileFallback.style.display = "block";
-    }
 
     async function loadPDF() {
-      try {
-        pdfDocument = await pdfjsLib.getDocument(PDF_URL).promise;
 
-        await Promise.all([
-          renderDesktop(),
-          renderMobile()
-        ]);
-      }
-      catch (error) {
-        console.error("Erro ao carregar o novo layout:", error);
-        showFallback();
-      }
+      pdfDocument =
+        await pdfjsLib
+          .getDocument(PDF_URL)
+          .promise;
+
+      await renderDesktop();
+
+      await renderMobile();
+
     }
+
+
+
+    async function renderPage(
+      pageNumber,
+      canvas,
+      container
+    ) {
+
+      if (!pdfDocument) return;
+
+
+      const page =
+        await pdfDocument
+          .getPage(pageNumber);
+
+
+      /*
+        viewport inicial para descobrir
+        proporção real da página
+      */
+
+      const baseViewport =
+        page.getViewport({
+          scale: 1
+        });
+
+
+      const cssWidth =
+        container.clientWidth;
+
+
+      /*
+        Usa pixel ratio para manter
+        a arte nítida em Retina/iPhone.
+      */
+
+      const pixelRatio =
+        Math.min(
+          window.devicePixelRatio || 1,
+          2
+        );
+
+
+      const scale =
+        (
+          cssWidth /
+          baseViewport.width
+        ) *
+        pixelRatio;
+
+
+      const viewport =
+        page.getViewport({
+          scale
+        });
+
+
+      canvas.width =
+        Math.floor(
+          viewport.width
+        );
+
+
+      canvas.height =
+        Math.floor(
+          viewport.height
+        );
+
+
+      /*
+        CSS mantém tamanho correto
+        independentemente da resolução.
+      */
+
+      canvas.style.width =
+        cssWidth + "px";
+
+
+      canvas.style.height =
+        (
+          viewport.height /
+          pixelRatio
+        ) + "px";
+
+
+      const context =
+        canvas.getContext(
+          "2d",
+          {
+            alpha: false
+          }
+        );
+
+
+      await page.render({
+
+        canvasContext:
+          context,
+
+        viewport:
+          viewport
+
+      }).promise;
+
+    }
+
+
+
+    async function renderDesktop() {
+
+      const canvas =
+        document.getElementById(
+          "desktopCanvas"
+        );
+
+
+      const container =
+        document.getElementById(
+          "desktopLayout"
+        );
+
+
+      await renderPage(
+        1,
+        canvas,
+        container
+      );
+
+    }
+
+
+
+    async function renderMobile() {
+
+      const canvas =
+        document.getElementById(
+          "mobileCanvas"
+        );
+
+
+      const container =
+        document.getElementById(
+          "mobileLayout"
+        );
+
+
+      await renderPage(
+        2,
+        canvas,
+        container
+      );
+
+    }
+
+
+
+    /*
+      Recalibra automaticamente
+      quando muda largura/orientação.
+    */
 
     let resizeTimer;
 
-    window.addEventListener("resize", () => {
-      if (!pdfDocument) return;
 
-      clearTimeout(resizeTimer);
+    window.addEventListener(
+      "resize",
+      () => {
 
-      resizeTimer = setTimeout(async () => {
-        if (window.innerWidth >= 768) {
-          await renderDesktop();
-        }
-        else {
-          await renderMobile();
-        }
-      }, 180);
-    });
+        clearTimeout(
+          resizeTimer
+        );
 
-    loadPDF();
+
+        resizeTimer =
+          setTimeout(
+            async () => {
+
+              if (
+                window.innerWidth
+                >= 768
+              ) {
+
+                await renderDesktop();
+
+              }
+
+              else {
+
+                await renderMobile();
+
+              }
+
+            },
+            180
+          );
+
+      }
+    );
+
+
+
+    /*
+      Inicialização
+    */
+
+    loadPDF().catch(
+      error => {
+
+        console.error(
+          "Erro ao carregar o layout:",
+          error
+        );
+
+      }
+    );
+
   </script>
+
+
 </body>
+
 </html>
