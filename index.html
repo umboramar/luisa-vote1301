@@ -4,339 +4,362 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ef252a">
-  <meta name="description" content="Luisa Cela 1301. Federal é ela.">
+  <meta name="description" content="Luisa Cela. Vencemos, mas a luta continua para reeleger Lula presidente.">
   <meta name="color-scheme" content="light only">
 
-  <title>Luisa Cela 1301 | Federal é ela</title>
+  <title>Luisa Cela | A luta continua</title>
 
   <link rel="canonical" href="https://www.luisacela.com.br/">
 
-  <link rel="icon" href="/favicon.ico?v=20260826" type="image/x-icon" sizes="any">
-  <link rel="shortcut icon" href="/favicon.ico?v=20260826" type="image/x-icon">
-  <link rel="icon" href="/favicon.png?v=20260826" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png?v=20260826">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Luisa Cela 1301 | Federal é ela">
-  <meta property="og:description" content="Luisa Cela 1301. Federal é ela.">
-  <meta property="og:url" content="https://www.luisacela.com.br/">
-  <meta property="og:image" content="https://www.luisacela.com.br/assets/desktop-v3-1280.webp">
+  <!-- FAVICON - PRESERVADO -->
+  <link rel="icon" href="/favicon.ico?v=20261019" type="image/x-icon" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico?v=20261019" type="image/x-icon">
+  <link rel="icon" href="/favicon.png?v=20261019" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png?v=20261019">
 
   <style>
-    :root { color-scheme: light; }
-    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light;
+      --vermelho: #ef252a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     html,
     body {
       margin: 0;
       padding: 0;
+      width: 100%;
       min-height: 100%;
-      background: #ef252a;
+      background: var(--vermelho);
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .page {
-      position: relative;
+    .site {
       width: 100%;
-      margin: 0;
+      margin: 0 auto;
+      background: var(--vermelho);
     }
 
-    .view {
+    .layout {
       position: relative;
       width: 100%;
       margin: 0 auto;
       line-height: 0;
       overflow: hidden;
+      background: var(--vermelho);
     }
 
-    .view picture,
-    .view picture img {
+    .desktop-layout {
+      display: block;
+      max-width: 1920px;
+    }
+
+    .mobile-layout {
+      display: none;
+      max-width: 760px;
+    }
+
+    .pdf-canvas,
+    .fallback-image {
       display: block;
       width: 100%;
       height: auto;
       margin: 0;
       padding: 0;
-      user-select: none;
-      -webkit-user-drag: none;
+      background: var(--vermelho);
     }
 
-    .desktop-view {
-      display: block;
-      max-width: 1920px;
-    }
-
-    .mobile-view {
+    .fallback-image {
       display: none;
-      max-width: 767px;
     }
 
-    /* BOTÕES DO TOPO - mantidos no mesmo local e com o mesmo visual */
-    .quick-links {
+    .hotspot {
       position: absolute;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 50;
-      width: max-content;
-      max-width: calc(100% - 24px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      line-height: normal;
-    }
-
-    .quick-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 10px 16px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 2px solid rgba(255, 255, 255, 0.95);
-      border-radius: 999px;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15.4px;
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: 0.01em;
-      text-align: center;
+      z-index: 20;
+      display: none;
+      cursor: pointer;
+      background: transparent;
       text-decoration: none;
-      white-space: nowrap;
-      cursor: pointer;
-      backdrop-filter: blur(1.5px);
-      -webkit-backdrop-filter: blur(1.5px);
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-
-    .quick-links a:hover {
-      background: rgba(255, 255, 255, 0.22);
-      transform: translateY(-1px);
-    }
-
-    .quick-links a:focus-visible {
-      outline: 2px solid rgba(255, 255, 255, 0.95);
-      outline-offset: 2px;
-    }
-
-    /* HOTSPOTS - coordenadas mantidas; apenas o canvas foi expandido para baixo */
-    .hotspots {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: visible;
-    }
-
-    .hotspots a {
-      pointer-events: all;
-      cursor: pointer;
-      outline: none;
-      touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      border-radius: 8px;
     }
 
-    .hotspots .hit {
-      fill: transparent;
-      stroke: transparent;
-      pointer-events: all;
+    .pdf-ready .hotspot {
+      display: block;
     }
 
-    .hotspots a:hover .hit,
-    .hotspots a:focus .hit,
-    .hotspots a:focus-visible .hit,
-    .hotspots a:active .hit {
-      fill: transparent;
-      stroke: transparent;
-      outline: none;
+    .hotspot:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 4px;
+    }
+
+    /* DESKTOP - PÁGINA 1 */
+
+    .desktop-whatsapp {
+      left: 56.0%;
+      top: 18.0%;
+      width: 32.5%;
+      height: 12.5%;
+    }
+
+    .desktop-video {
+      left: 53.0%;
+      top: 31.0%;
+      width: 32.5%;
+      height: 14.5%;
+    }
+
+    .desktop-apoio {
+      left: 26.0%;
+      top: 66.0%;
+      width: 48.0%;
+      height: 15.0%;
+    }
+
+    /* MOBILE - PÁGINA 2 */
+
+    .mobile-whatsapp {
+      left: 15.0%;
+      top: 8.0%;
+      width: 72.0%;
+      height: 11.0%;
+    }
+
+    .mobile-video {
+      left: 15.0%;
+      top: 18.5%;
+      width: 72.0%;
+      height: 10.0%;
+    }
+
+    .mobile-apoio {
+      left: 13.0%;
+      top: 77.0%;
+      width: 74.0%;
+      height: 11.0%;
     }
 
     @media (max-width: 767px) {
-      .desktop-view { display: none; }
-      .mobile-view { display: block; }
-
-      .quick-links {
-        top: 10px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: calc(100% - 12px);
-        max-width: none;
-        justify-content: center;
-        gap: 6px;
+      .desktop-layout {
+        display: none;
       }
 
-      .quick-links a {
-        min-height: 40px;
-        padding: 8px 12px;
-        font-size: 13.4px;
-        border-width: 1.5px;
+      .mobile-layout {
+        display: block;
       }
     }
 
     @media (min-width: 768px) {
-      .desktop-view { display: block; }
-      .mobile-view { display: none; }
+      .desktop-layout {
+        display: block;
+      }
+
+      .mobile-layout {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main class="page" aria-label="Site oficial da campanha Luisa Cela 1301">
+  <main class="site" aria-label="Site oficial de Luisa Cela">
 
-    <nav class="quick-links" aria-label="Links rápidos da campanha">
-      <a
-        href="https://flic.kr/ps/486qym"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Fotos com Luisa Cela"
-      >FOTOS COM ELA</a>
+    <!-- DESKTOP - PÁGINA 1 DO PDF -->
+    <section
+      class="layout desktop-layout"
+      id="desktopLayout"
+      aria-label="Versão desktop do site"
+    >
+      <canvas
+        id="desktopCanvas"
+        class="pdf-canvas"
+        aria-label="Layout desktop Luisa Cela"
+      ></canvas>
 
-      <a
-        href="https://wa.me/5585998259942?text=Quero%20receber%20os%20materiais%20da%20Luisa%20Cela%201301%2C%20a%20n%C3%BAmero%201%20do%20Lula%20no%20Cear%C3%A1%2C%20na%20minha%20casa"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Quero material de campanha"
-      >QUERO MATERIAL</a>
-
-      <a
-        href="https://twb.nz/luisacela1301"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Acessar Twibbonize da campanha"
-      >TWIBBONIZE</a>
-    </nav>
-
-    <section class="view desktop-view" aria-label="Versão desktop do site Luisa Cela 1301">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="assets/desktop-v3-1280.webp 1280w, assets/desktop-v3-1920.webp 1920w"
-          sizes="(min-width: 1920px) 1920px, 100vw"
-        >
-        <img
-          src="assets/desktop-v3-1920.jpg"
-          width="1920"
-          height="4878"
-          alt="Luisa Cela 1301. Federal é ela. Informações da campanha, trajetória, propostas e formas de participar."
-          fetchpriority="high"
-          decoding="async"
-        >
-      </picture>
-
-      <svg
-        class="hotspots"
-        viewBox="0 0 1920 4878"
-        preserveAspectRatio="none"
-        aria-label="Links da campanha na versão desktop"
+      <img
+        id="desktopFallback"
+        class="fallback-image"
+        src="assets/desktop-v3-1920.jpg"
+        alt=""
       >
-        <a
-          href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Faça parte do nosso grupo no WhatsApp"
-        >
-          <polygon class="hit" points="1281,809 1030,862 1030,977 1281,924"></polygon>
-        </a>
 
-        <a
-          href="https://queroapoiar.com.br/luisacela"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Apoie nossa campanha"
-        >
-          <polygon class="hit" points="1591,751 1340,804 1340,919 1591,866"></polygon>
-        </a>
+      <a
+        class="hotspot desktop-whatsapp"
+        href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Faça parte do nosso grupo no WhatsApp"
+      ></a>
 
-        <a
-          href="https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Baixe nosso material de campanha"
-        >
-          <polygon class="hit" points="1871,698 1620,751 1620,866 1871,813"></polygon>
-        </a>
+      <a
+        class="hotspot desktop-video"
+        href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Assista ao vídeo A luta continua"
+      ></a>
 
-        <a
-          href="https://www.youtube.com/watch?v=mDepUrOsRLA"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Acesse nosso vídeo no YouTube"
-        >
-          <rect class="hit" x="1048" y="1029" width="569" height="329"></rect>
-          <rect class="hit" x="1647" y="1215" width="181" height="190"></rect>
-        </a>
-      </svg>
+      <a
+        class="hotspot desktop-apoio"
+        href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Quero apoiar a campanha do Lula"
+      ></a>
     </section>
 
-    <section class="view mobile-view" aria-label="Versão mobile do site Luisa Cela 1301">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="assets/mobile-v3-380.webp 380w, assets/mobile-v3-740.webp 740w"
-          sizes="100vw"
-        >
-        <img
-          src="assets/mobile-v3-760.jpg"
-          width="760"
-          height="16750"
-          alt="Luisa Cela 1301. Versão para celular com informações da campanha, trajetória, propostas e formas de participar."
-          fetchpriority="high"
-          decoding="async"
-        >
-      </picture>
+    <!-- MOBILE - PÁGINA 2 DO PDF -->
+    <section
+      class="layout mobile-layout"
+      id="mobileLayout"
+      aria-label="Versão mobile do site"
+    >
+      <canvas
+        id="mobileCanvas"
+        class="pdf-canvas"
+        aria-label="Layout mobile Luisa Cela"
+      ></canvas>
 
-      <svg
-        class="hotspots"
-        viewBox="0 0 380 8375"
-        preserveAspectRatio="none"
-        aria-label="Links da campanha na versão mobile"
+      <img
+        id="mobileFallback"
+        class="fallback-image"
+        src="assets/mobile-v3-760.jpg"
+        alt=""
       >
-        <a
-          href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Faça parte do nosso grupo no WhatsApp"
-        >
-          <rect class="hit" x="82" y="320" width="225" height="145"></rect>
-        </a>
 
-        <a
-          href="https://queroapoiar.com.br/luisacela"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Apoie nossa campanha"
-        >
-          <rect class="hit" x="82" y="458" width="225" height="142"></rect>
-        </a>
+      <a
+        class="hotspot mobile-whatsapp"
+        href="https://chat.whatsapp.com/CPQ7WsrkH1DGuOFpBEhbXJ?mode=gi_t"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Faça parte do nosso grupo no WhatsApp"
+      ></a>
 
-        <a
-          href="https://drive.google.com/drive/folders/16SmHWnxXPgsi4ij5GoGuI4YneVEbyZQ8"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Baixe nosso material de campanha"
-        >
-          <rect class="hit" x="82" y="590" width="225" height="160"></rect>
-        </a>
+      <a
+        class="hotspot mobile-video"
+        href="https://drive.google.com/file/d/1ANgnYnqyqHZyLz1hzP0ppt5ZiYMQ9iW1/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Assista ao vídeo A luta continua"
+      ></a>
 
-        <a
-          href="https://www.youtube.com/watch?v=mDepUrOsRLA"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Acesse nosso vídeo no YouTube"
-        >
-          <rect class="hit" x="20" y="790" width="345" height="170"></rect>
-        </a>
-      </svg>
+      <a
+        class="hotspot mobile-apoio"
+        href="https://docs.google.com/forms/d/1tj3fRow7f6g_9etI_BvGTKsArOyaplQ4L4tYq7gUL4o/viewform?hl=pt-br&amp;pli=1&amp;edit_requested=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Quero apoiar a campanha do Lula"
+      ></a>
     </section>
 
   </main>
+
+  <script type="module">
+    import * as pdfjsLib
+      from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.min.mjs";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs";
+
+    const PDF_URL = "./assets/site-luisa-r03.pdf";
+    let pdfDocument = null;
+
+    async function renderPage(pageNumber, canvas, container) {
+      const page = await pdfDocument.getPage(pageNumber);
+
+      const baseViewport = page.getViewport({ scale: 1 });
+      const cssWidth = container.clientWidth;
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+      const scale = (cssWidth / baseViewport.width) * pixelRatio;
+      const viewport = page.getViewport({ scale });
+
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+
+      canvas.style.width = cssWidth + "px";
+      canvas.style.height = (viewport.height / pixelRatio) + "px";
+
+      const context = canvas.getContext("2d", { alpha: false });
+
+      await page.render({
+        canvasContext: context,
+        viewport
+      }).promise;
+
+      container.classList.add("pdf-ready");
+    }
+
+    async function renderDesktop() {
+      await renderPage(
+        1,
+        document.getElementById("desktopCanvas"),
+        document.getElementById("desktopLayout")
+      );
+    }
+
+    async function renderMobile() {
+      await renderPage(
+        2,
+        document.getElementById("mobileCanvas"),
+        document.getElementById("mobileLayout")
+      );
+    }
+
+    function showFallback() {
+      const desktopCanvas = document.getElementById("desktopCanvas");
+      const mobileCanvas = document.getElementById("mobileCanvas");
+      const desktopFallback = document.getElementById("desktopFallback");
+      const mobileFallback = document.getElementById("mobileFallback");
+
+      desktopCanvas.style.display = "none";
+      mobileCanvas.style.display = "none";
+
+      desktopFallback.style.display = "block";
+      mobileFallback.style.display = "block";
+    }
+
+    async function loadPDF() {
+      try {
+        pdfDocument = await pdfjsLib.getDocument(PDF_URL).promise;
+
+        await Promise.all([
+          renderDesktop(),
+          renderMobile()
+        ]);
+      }
+      catch (error) {
+        console.error("Erro ao carregar o novo layout:", error);
+        showFallback();
+      }
+    }
+
+    let resizeTimer;
+
+    window.addEventListener("resize", () => {
+      if (!pdfDocument) return;
+
+      clearTimeout(resizeTimer);
+
+      resizeTimer = setTimeout(async () => {
+        if (window.innerWidth >= 768) {
+          await renderDesktop();
+        }
+        else {
+          await renderMobile();
+        }
+      }, 180);
+    });
+
+    loadPDF();
+  </script>
 </body>
 </html>
